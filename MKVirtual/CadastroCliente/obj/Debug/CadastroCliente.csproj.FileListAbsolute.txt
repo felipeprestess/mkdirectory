@@ -1,0 +1,12 @@
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\bin\Debug\CadastroCliente.exe
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\bin\Debug\CadastroCliente.pdb
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.csprojResolveAssemblyReference.cache
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.FormClientes.resources
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.Properties.Resources.resources
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.csproj.GenerateResource.Cache
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.exe
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.pdb
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.FormPrincipal.resources
+C:\Users\Felipe.Costa\Documents\Visual Studio 2013\Projects\fontefelipe\CadastroCliente\CadastroCliente\obj\Debug\CadastroCliente.FormProdutos.resources
+C:\Projetos\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.exe
+C:\Projetos\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.pdb
