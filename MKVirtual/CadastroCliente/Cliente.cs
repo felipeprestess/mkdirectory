@@ -8,35 +8,64 @@ namespace CadastroCliente
 {
     public class Cliente
     {
-        public string Nome{get; set;}
-        public int Idade { get; set; }
-        public string Email { get; set; }
-        public int Telefone { get; set; }
-        public char Sexo { get; set; }
+        string nome;
+        public string Nome
+        {
+            get { return nome; }
+            set { nome = value; }
+        }
+        int idade;
+        public int Idade
+        {
+            get { return idade; }
+            set { idade = value; }
+        }
+        string email;
+        public string Email
+        {
+            get { return email; }
+            set { email = value; }
+        }
 
-        public void listaCliente() { }
+        int telefone;
+        public int Telefone
+        {
+            get { return telefone; }
+            set { telefone = value; }
+        }
+
+        string sexo;
+        public string Sexo
+        {
+            get { return sexo; }
+            set { sexo = value; }
+        }
+        public List<Cliente> listaClientes = new List<Cliente>();
+
+        //Pesquisar por cliente
+        public void pesquisarCliente()
+        {
+            
+        }
         
+        //Listar todos clientes
+        public void listarTodosClientes()
+        {
+            foreach (Cliente cliente in listaClientes)
+            {
+                MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}", cliente.nome, cliente.idade, cliente.email, cliente.telefone));
+            }
+        }
       
         
 
 
         /*Método de adicionar cliente*/
-        public void adicionaCliente(string nome, int idade, string email, int fone, char sexo)
+        public void adicionaCliente(string nome, int idade, string email, int fone, string sexo)
         {
-            Cliente person = new Cliente();
-            person.Nome = nome;
-            person.Idade = idade;
-            person.Email = email;
-            person.Telefone = fone;
-            person.Sexo = sexo;
-            List<Cliente> mCliente = new List<Cliente>();
-            mCliente.Add(person);
-
-            foreach (var cliente in mCliente)
-            {
-                MessageBox.Show("Cliente " + cliente.Nome + "adicionado com sucesso!", "Cadastro Cliente");
-            }
-                
+            Cliente person = new Cliente() { Nome = nome, Idade = idade, Email = email, Telefone = fone, Sexo = sexo };
+            listaClientes.Add(person);
+            MessageBox.Show("Cliente adicionado com sucesso!", "Cadastro Cliente");   
         }
 
 

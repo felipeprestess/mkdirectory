@@ -39,8 +39,9 @@
             this.labelTelefoneCadastroCliente = new System.Windows.Forms.Label();
             this.textBoxTelefoneCliente = new System.Windows.Forms.TextBox();
             this.labelSexoCadastroCliente = new System.Windows.Forms.Label();
-            this.radioButtonSexoCliente = new System.Windows.Forms.RadioButton();
+            this.radioButtonSexoFemininoCliente = new System.Windows.Forms.RadioButton();
             this.radioButtonSexoMasculinoCliente = new System.Windows.Forms.RadioButton();
+            this.buttonMostrarTodosClientes = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNomeCadastroCliente
@@ -88,11 +89,11 @@
             // 
             // buttonAdicionaCliente
             // 
-            this.buttonAdicionaCliente.Location = new System.Drawing.Point(16, 188);
+            this.buttonAdicionaCliente.Location = new System.Drawing.Point(19, 188);
             this.buttonAdicionaCliente.Name = "buttonAdicionaCliente";
-            this.buttonAdicionaCliente.Size = new System.Drawing.Size(75, 23);
+            this.buttonAdicionaCliente.Size = new System.Drawing.Size(81, 23);
             this.buttonAdicionaCliente.TabIndex = 6;
-            this.buttonAdicionaCliente.Text = "Add";
+            this.buttonAdicionaCliente.Text = "Adicionar";
             this.buttonAdicionaCliente.UseVisualStyleBackColor = true;
             this.buttonAdicionaCliente.Click += new System.EventHandler(this.buttonAdicionaCliente_Click);
             // 
@@ -138,16 +139,16 @@
             this.labelSexoCadastroCliente.TabIndex = 11;
             this.labelSexoCadastroCliente.Text = "Sexo";
             // 
-            // radioButtonSexoCliente
+            // radioButtonSexoFemininoCliente
             // 
-            this.radioButtonSexoCliente.AutoSize = true;
-            this.radioButtonSexoCliente.Location = new System.Drawing.Point(65, 140);
-            this.radioButtonSexoCliente.Name = "radioButtonSexoCliente";
-            this.radioButtonSexoCliente.Size = new System.Drawing.Size(67, 17);
-            this.radioButtonSexoCliente.TabIndex = 12;
-            this.radioButtonSexoCliente.TabStop = true;
-            this.radioButtonSexoCliente.Text = "Feminino";
-            this.radioButtonSexoCliente.UseVisualStyleBackColor = true;
+            this.radioButtonSexoFemininoCliente.AutoSize = true;
+            this.radioButtonSexoFemininoCliente.Location = new System.Drawing.Point(65, 140);
+            this.radioButtonSexoFemininoCliente.Name = "radioButtonSexoFemininoCliente";
+            this.radioButtonSexoFemininoCliente.Size = new System.Drawing.Size(67, 17);
+            this.radioButtonSexoFemininoCliente.TabIndex = 12;
+            this.radioButtonSexoFemininoCliente.TabStop = true;
+            this.radioButtonSexoFemininoCliente.Text = "Feminino";
+            this.radioButtonSexoFemininoCliente.UseVisualStyleBackColor = true;
             // 
             // radioButtonSexoMasculinoCliente
             // 
@@ -161,13 +162,24 @@
             this.radioButtonSexoMasculinoCliente.Text = "Masculino";
             this.radioButtonSexoMasculinoCliente.UseVisualStyleBackColor = true;
             // 
+            // buttonMostrarTodosClientes
+            // 
+            this.buttonMostrarTodosClientes.Location = new System.Drawing.Point(240, 12);
+            this.buttonMostrarTodosClientes.Name = "buttonMostrarTodosClientes";
+            this.buttonMostrarTodosClientes.Size = new System.Drawing.Size(89, 23);
+            this.buttonMostrarTodosClientes.TabIndex = 14;
+            this.buttonMostrarTodosClientes.Text = "Mostrar Todos";
+            this.buttonMostrarTodosClientes.UseVisualStyleBackColor = true;
+            this.buttonMostrarTodosClientes.Click += new System.EventHandler(this.buttonMostrarTodosClientes_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(294, 246);
+            this.ClientSize = new System.Drawing.Size(335, 246);
+            this.Controls.Add(this.buttonMostrarTodosClientes);
             this.Controls.Add(this.radioButtonSexoMasculinoCliente);
-            this.Controls.Add(this.radioButtonSexoCliente);
+            this.Controls.Add(this.radioButtonSexoFemininoCliente);
             this.Controls.Add(this.labelSexoCadastroCliente);
             this.Controls.Add(this.textBoxTelefoneCliente);
             this.Controls.Add(this.labelTelefoneCadastroCliente);
@@ -199,7 +211,8 @@
         private System.Windows.Forms.Label labelTelefoneCadastroCliente;
         private System.Windows.Forms.TextBox textBoxTelefoneCliente;
         private System.Windows.Forms.Label labelSexoCadastroCliente;
-        private System.Windows.Forms.RadioButton radioButtonSexoCliente;
+        private System.Windows.Forms.RadioButton radioButtonSexoFemininoCliente;
         private System.Windows.Forms.RadioButton radioButtonSexoMasculinoCliente;
+        private System.Windows.Forms.Button buttonMostrarTodosClientes;
     }
 }

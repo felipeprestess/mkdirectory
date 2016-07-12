@@ -25,10 +25,15 @@ namespace CadastroCliente
         private void buttonAdicionaCliente_Click(object sender, EventArgs e)
         {
             string nome = textBoxNomeCliente.Text;
-            int idade = Convert.ToInt32(textBoxIdadeCadastroCliente.Text);
+            int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
-            int fone = Convert.ToInt32(textBoxTelefoneCliente.Text);
-            char sexo = Convert.ToChar(radioButtonSexoCliente.Checked);
+            int fone = int.Parse(textBoxTelefoneCliente.Text);
+            string sexo = "";
+            if (radioButtonSexoFemininoCliente.Checked)
+                sexo = "Feminino";
+            else
+                sexo = "Masculino";
+
             cliente.adicionaCliente(nome, idade, email, fone, sexo);
             limpaCampoCadastroCliente();
         }
@@ -44,6 +49,8 @@ namespace CadastroCliente
             textBoxIdadeCadastroCliente.Clear();
             textBoxEmailCliente.Clear();
             textBoxTelefoneCliente.Clear();
+            radioButtonSexoFemininoCliente.Checked = false;
+            radioButtonSexoMasculinoCliente.Checked = false;
         }
 
         private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
@@ -53,13 +60,19 @@ namespace CadastroCliente
 
         private void textBoxIdadeCliente_TextChanged(object sender, EventArgs e)
         {
-            cliente.Idade = Convert.ToInt32(textBoxIdadeCadastroCliente.Text);
+            cliente.Idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             
         }
 
         private void textBoxEmailCliente_TextChanged(object sender, EventArgs e)
         {
             cliente.Email = textBoxEmailCliente.Text;
+        }
+
+        private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
+        {
+            //Cliente clienteEntradaUser = new Cliente() { Nome = textBoxNomeCliente.Text};
+            cliente.listarTodosClientes();
         }
     }
 }

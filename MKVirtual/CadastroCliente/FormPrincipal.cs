@@ -26,7 +26,7 @@ namespace CadastroCliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormProdutos form = new FormProdutos();
+            FormClientes form = new FormClientes();
             form.Show();
         }
 

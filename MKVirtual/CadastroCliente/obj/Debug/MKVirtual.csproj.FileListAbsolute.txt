@@ -11,3 +11,12 @@ C:\Projetos\MKVirtual\CadastroCliente\bin\Debug\CadastroCliente.pdb
 C:\Projetos\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormFinanceiro.resources
 C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.exe
 C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.pdb
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\bin\Debug\CadastroCliente.exe
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\bin\Debug\CadastroCliente.pdb
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\MKVirtual.csprojResolveAssemblyReference.cache
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormFinanceiro.resources
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormPrincipal.resources
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormClientes.resources
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormProdutos.resources
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.Properties.Resources.resources
+C:\Users\Felipe Prestes\Documents\Repositorios GitHub\mkdevlopment\MKVirtual\CadastroCliente\obj\Debug\MKVirtual.csproj.GenerateResource.Cache
