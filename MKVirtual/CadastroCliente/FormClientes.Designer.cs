@@ -42,6 +42,8 @@
             this.radioButtonSexoFemininoCliente = new System.Windows.Forms.RadioButton();
             this.radioButtonSexoMasculinoCliente = new System.Windows.Forms.RadioButton();
             this.buttonMostrarTodosClientes = new System.Windows.Forms.Button();
+            this.textBoxPesquisaNomeCliente = new System.Windows.Forms.TextBox();
+            this.buttonPesquisarCliente = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // labelNomeCadastroCliente
@@ -93,7 +95,7 @@
             this.buttonAdicionaCliente.Name = "buttonAdicionaCliente";
             this.buttonAdicionaCliente.Size = new System.Drawing.Size(81, 23);
             this.buttonAdicionaCliente.TabIndex = 6;
-            this.buttonAdicionaCliente.Text = "Adicionar";
+            this.buttonAdicionaCliente.Text = "Cadastrar";
             this.buttonAdicionaCliente.UseVisualStyleBackColor = true;
             this.buttonAdicionaCliente.Click += new System.EventHandler(this.buttonAdicionaCliente_Click);
             // 
@@ -172,11 +174,30 @@
             this.buttonMostrarTodosClientes.UseVisualStyleBackColor = true;
             this.buttonMostrarTodosClientes.Click += new System.EventHandler(this.buttonMostrarTodosClientes_Click);
             // 
+            // textBoxPesquisaNomeCliente
+            // 
+            this.textBoxPesquisaNomeCliente.Location = new System.Drawing.Point(19, 214);
+            this.textBoxPesquisaNomeCliente.Name = "textBoxPesquisaNomeCliente";
+            this.textBoxPesquisaNomeCliente.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPesquisaNomeCliente.TabIndex = 15;
+            // 
+            // buttonPesquisarCliente
+            // 
+            this.buttonPesquisarCliente.Location = new System.Drawing.Point(131, 211);
+            this.buttonPesquisarCliente.Name = "buttonPesquisarCliente";
+            this.buttonPesquisarCliente.Size = new System.Drawing.Size(75, 23);
+            this.buttonPesquisarCliente.TabIndex = 16;
+            this.buttonPesquisarCliente.Text = "Pesquisar";
+            this.buttonPesquisarCliente.UseVisualStyleBackColor = true;
+            this.buttonPesquisarCliente.Click += new System.EventHandler(this.buttonPesquisarCliente_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(335, 246);
+            this.Controls.Add(this.buttonPesquisarCliente);
+            this.Controls.Add(this.textBoxPesquisaNomeCliente);
             this.Controls.Add(this.buttonMostrarTodosClientes);
             this.Controls.Add(this.radioButtonSexoMasculinoCliente);
             this.Controls.Add(this.radioButtonSexoFemininoCliente);
@@ -214,5 +235,7 @@
         private System.Windows.Forms.RadioButton radioButtonSexoFemininoCliente;
         private System.Windows.Forms.RadioButton radioButtonSexoMasculinoCliente;
         private System.Windows.Forms.Button buttonMostrarTodosClientes;
+        private System.Windows.Forms.TextBox textBoxPesquisaNomeCliente;
+        private System.Windows.Forms.Button buttonPesquisarCliente;
     }
 }

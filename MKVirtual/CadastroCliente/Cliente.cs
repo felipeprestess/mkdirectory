@@ -43,17 +43,25 @@ namespace CadastroCliente
         public List<Cliente> listaClientes = new List<Cliente>();
 
         //Pesquisar por cliente
-        public void pesquisarCliente()
+        public void pesquisarCliente(Cliente cliente)
         {
-            
+            Cliente ClientePesquisado = new Cliente() { Nome = cliente.nome };
+            foreach (Cliente clienteDaLista in listaClientes)
+            {
+                if (ClientePesquisado.Nome == clienteDaLista.nome)
+                {
+                    MessageBox.Show(string.Format("Nome: {0}\nEmail: {1}\n Telefone: {2}", clienteDaLista.nome, clienteDaLista.email, clienteDaLista.telefone));
+                    break;
+                }
+            }
         }
         
         //Listar todos clientes
         public void listarTodosClientes()
         {
-            foreach (Cliente cliente in listaClientes)
+            foreach (Cliente ClienteDaLista in listaClientes)
             {
-                MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}", cliente.nome, cliente.idade, cliente.email, cliente.telefone));
+                MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}", ClienteDaLista.nome, ClienteDaLista.idade, ClienteDaLista.email, ClienteDaLista.telefone));
             }
         }
       

@@ -51,6 +51,7 @@ namespace CadastroCliente
             textBoxTelefoneCliente.Clear();
             radioButtonSexoFemininoCliente.Checked = false;
             radioButtonSexoMasculinoCliente.Checked = false;
+            textBoxPesquisaNomeCliente.Clear();
         }
 
         private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
@@ -71,8 +72,15 @@ namespace CadastroCliente
 
         private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
         {
-            //Cliente clienteEntradaUser = new Cliente() { Nome = textBoxNomeCliente.Text};
+            
             cliente.listarTodosClientes();
+        }
+
+        private void buttonPesquisarCliente_Click(object sender, EventArgs e)
+        { 
+            Cliente clientePesquisadoUser = new Cliente() { Nome = textBoxPesquisaNomeCliente.Text };
+            cliente.pesquisarCliente(clientePesquisadoUser);
+            limpaCampoCadastroCliente();
         }
     }
 }
