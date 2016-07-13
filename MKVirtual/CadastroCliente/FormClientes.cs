@@ -74,6 +74,9 @@ namespace CadastroCliente
         {
             
             cliente.listarTodosClientes();
+            listViewClientes.Show();
+            
+            
         }
 
         private void buttonPesquisarCliente_Click(object sender, EventArgs e)
@@ -81,6 +84,21 @@ namespace CadastroCliente
             Cliente clientePesquisadoUser = new Cliente() { Nome = textBoxPesquisaNomeCliente.Text };
             cliente.pesquisarCliente(clientePesquisadoUser);
             limpaCampoCadastroCliente();
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void listViewClientes_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

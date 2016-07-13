@@ -44,12 +44,18 @@
             this.buttonMostrarTodosClientes = new System.Windows.Forms.Button();
             this.textBoxPesquisaNomeCliente = new System.Windows.Forms.TextBox();
             this.buttonPesquisarCliente = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.listViewClientes = new System.Windows.Forms.ListView();
+            this.colunaNomeCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colunaIdadeCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.colunaEmailCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // labelNomeCadastroCliente
             // 
             this.labelNomeCadastroCliente.AutoSize = true;
-            this.labelNomeCadastroCliente.Location = new System.Drawing.Point(13, 38);
+            this.labelNomeCadastroCliente.Location = new System.Drawing.Point(452, 71);
             this.labelNomeCadastroCliente.Name = "labelNomeCadastroCliente";
             this.labelNomeCadastroCliente.Size = new System.Drawing.Size(35, 13);
             this.labelNomeCadastroCliente.TabIndex = 0;
@@ -58,7 +64,7 @@
             // labelIdadeCadastroCliente
             // 
             this.labelIdadeCadastroCliente.AutoSize = true;
-            this.labelIdadeCadastroCliente.Location = new System.Drawing.Point(12, 66);
+            this.labelIdadeCadastroCliente.Location = new System.Drawing.Point(451, 99);
             this.labelIdadeCadastroCliente.Name = "labelIdadeCadastroCliente";
             this.labelIdadeCadastroCliente.Size = new System.Drawing.Size(34, 13);
             this.labelIdadeCadastroCliente.TabIndex = 1;
@@ -67,7 +73,7 @@
             // labelEmailCadastroCliente
             // 
             this.labelEmailCadastroCliente.AutoSize = true;
-            this.labelEmailCadastroCliente.Location = new System.Drawing.Point(13, 91);
+            this.labelEmailCadastroCliente.Location = new System.Drawing.Point(452, 124);
             this.labelEmailCadastroCliente.Name = "labelEmailCadastroCliente";
             this.labelEmailCadastroCliente.Size = new System.Drawing.Size(32, 13);
             this.labelEmailCadastroCliente.TabIndex = 2;
@@ -75,7 +81,7 @@
             // 
             // textBoxNomeCliente
             // 
-            this.textBoxNomeCliente.Location = new System.Drawing.Point(65, 31);
+            this.textBoxNomeCliente.Location = new System.Drawing.Point(504, 64);
             this.textBoxNomeCliente.Name = "textBoxNomeCliente";
             this.textBoxNomeCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxNomeCliente.TabIndex = 3;
@@ -83,7 +89,7 @@
             // 
             // textBoxEmailCliente
             // 
-            this.textBoxEmailCliente.Location = new System.Drawing.Point(65, 84);
+            this.textBoxEmailCliente.Location = new System.Drawing.Point(504, 117);
             this.textBoxEmailCliente.Name = "textBoxEmailCliente";
             this.textBoxEmailCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxEmailCliente.TabIndex = 5;
@@ -91,7 +97,7 @@
             // 
             // buttonAdicionaCliente
             // 
-            this.buttonAdicionaCliente.Location = new System.Drawing.Point(19, 188);
+            this.buttonAdicionaCliente.Location = new System.Drawing.Point(458, 221);
             this.buttonAdicionaCliente.Name = "buttonAdicionaCliente";
             this.buttonAdicionaCliente.Size = new System.Drawing.Size(81, 23);
             this.buttonAdicionaCliente.TabIndex = 6;
@@ -101,7 +107,7 @@
             // 
             // buttonLimpaCamposCliente
             // 
-            this.buttonLimpaCamposCliente.Location = new System.Drawing.Point(131, 188);
+            this.buttonLimpaCamposCliente.Location = new System.Drawing.Point(570, 221);
             this.buttonLimpaCamposCliente.Name = "buttonLimpaCamposCliente";
             this.buttonLimpaCamposCliente.Size = new System.Drawing.Size(75, 23);
             this.buttonLimpaCamposCliente.TabIndex = 7;
@@ -111,7 +117,7 @@
             // 
             // textBoxIdadeCadastroCliente
             // 
-            this.textBoxIdadeCadastroCliente.Location = new System.Drawing.Point(65, 58);
+            this.textBoxIdadeCadastroCliente.Location = new System.Drawing.Point(504, 91);
             this.textBoxIdadeCadastroCliente.Name = "textBoxIdadeCadastroCliente";
             this.textBoxIdadeCadastroCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxIdadeCadastroCliente.TabIndex = 8;
@@ -119,7 +125,7 @@
             // labelTelefoneCadastroCliente
             // 
             this.labelTelefoneCadastroCliente.AutoSize = true;
-            this.labelTelefoneCadastroCliente.Location = new System.Drawing.Point(13, 119);
+            this.labelTelefoneCadastroCliente.Location = new System.Drawing.Point(452, 152);
             this.labelTelefoneCadastroCliente.Name = "labelTelefoneCadastroCliente";
             this.labelTelefoneCadastroCliente.Size = new System.Drawing.Size(49, 13);
             this.labelTelefoneCadastroCliente.TabIndex = 9;
@@ -127,7 +133,7 @@
             // 
             // textBoxTelefoneCliente
             // 
-            this.textBoxTelefoneCliente.Location = new System.Drawing.Point(65, 111);
+            this.textBoxTelefoneCliente.Location = new System.Drawing.Point(504, 144);
             this.textBoxTelefoneCliente.Name = "textBoxTelefoneCliente";
             this.textBoxTelefoneCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxTelefoneCliente.TabIndex = 10;
@@ -135,7 +141,7 @@
             // labelSexoCadastroCliente
             // 
             this.labelSexoCadastroCliente.AutoSize = true;
-            this.labelSexoCadastroCliente.Location = new System.Drawing.Point(16, 142);
+            this.labelSexoCadastroCliente.Location = new System.Drawing.Point(455, 175);
             this.labelSexoCadastroCliente.Name = "labelSexoCadastroCliente";
             this.labelSexoCadastroCliente.Size = new System.Drawing.Size(31, 13);
             this.labelSexoCadastroCliente.TabIndex = 11;
@@ -144,7 +150,7 @@
             // radioButtonSexoFemininoCliente
             // 
             this.radioButtonSexoFemininoCliente.AutoSize = true;
-            this.radioButtonSexoFemininoCliente.Location = new System.Drawing.Point(65, 140);
+            this.radioButtonSexoFemininoCliente.Location = new System.Drawing.Point(504, 173);
             this.radioButtonSexoFemininoCliente.Name = "radioButtonSexoFemininoCliente";
             this.radioButtonSexoFemininoCliente.Size = new System.Drawing.Size(67, 17);
             this.radioButtonSexoFemininoCliente.TabIndex = 12;
@@ -155,7 +161,7 @@
             // radioButtonSexoMasculinoCliente
             // 
             this.radioButtonSexoMasculinoCliente.AutoSize = true;
-            this.radioButtonSexoMasculinoCliente.Location = new System.Drawing.Point(138, 140);
+            this.radioButtonSexoMasculinoCliente.Location = new System.Drawing.Point(577, 173);
             this.radioButtonSexoMasculinoCliente.Name = "radioButtonSexoMasculinoCliente";
             this.radioButtonSexoMasculinoCliente.Size = new System.Drawing.Size(73, 17);
             this.radioButtonSexoMasculinoCliente.TabIndex = 13;
@@ -166,7 +172,7 @@
             // 
             // buttonMostrarTodosClientes
             // 
-            this.buttonMostrarTodosClientes.Location = new System.Drawing.Point(240, 12);
+            this.buttonMostrarTodosClientes.Location = new System.Drawing.Point(439, 5);
             this.buttonMostrarTodosClientes.Name = "buttonMostrarTodosClientes";
             this.buttonMostrarTodosClientes.Size = new System.Drawing.Size(89, 23);
             this.buttonMostrarTodosClientes.TabIndex = 14;
@@ -176,14 +182,14 @@
             // 
             // textBoxPesquisaNomeCliente
             // 
-            this.textBoxPesquisaNomeCliente.Location = new System.Drawing.Point(19, 214);
+            this.textBoxPesquisaNomeCliente.Location = new System.Drawing.Point(19, 5);
             this.textBoxPesquisaNomeCliente.Name = "textBoxPesquisaNomeCliente";
             this.textBoxPesquisaNomeCliente.Size = new System.Drawing.Size(100, 20);
             this.textBoxPesquisaNomeCliente.TabIndex = 15;
             // 
             // buttonPesquisarCliente
             // 
-            this.buttonPesquisarCliente.Location = new System.Drawing.Point(131, 211);
+            this.buttonPesquisarCliente.Location = new System.Drawing.Point(125, 5);
             this.buttonPesquisarCliente.Name = "buttonPesquisarCliente";
             this.buttonPesquisarCliente.Size = new System.Drawing.Size(75, 23);
             this.buttonPesquisarCliente.TabIndex = 16;
@@ -191,11 +197,48 @@
             this.buttonPesquisarCliente.UseVisualStyleBackColor = true;
             this.buttonPesquisarCliente.Click += new System.EventHandler(this.buttonPesquisarCliente_Click);
             // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.listViewClientes);
+            this.panel1.Location = new System.Drawing.Point(38, 90);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(266, 188);
+            this.panel1.TabIndex = 17;
+            // 
+            // listViewClientes
+            // 
+            this.listViewClientes.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.colunaNomeCliente,
+            this.colunaIdadeCliente,
+            this.colunaEmailCliente});
+            this.listViewClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.listViewClientes.Location = new System.Drawing.Point(0, 0);
+            this.listViewClientes.Name = "listViewClientes";
+            this.listViewClientes.Size = new System.Drawing.Size(266, 188);
+            this.listViewClientes.TabIndex = 0;
+            this.listViewClientes.UseCompatibleStateImageBehavior = false;
+            this.listViewClientes.View = System.Windows.Forms.View.Details;
+            this.listViewClientes.Visible = false;
+            this.listViewClientes.SelectedIndexChanged += new System.EventHandler(this.listViewClientes_SelectedIndexChanged);
+            // 
+            // colunaNomeCliente
+            // 
+            this.colunaNomeCliente.Text = "Nome";
+            // 
+            // colunaIdadeCliente
+            // 
+            this.colunaIdadeCliente.Text = "Idade";
+            // 
+            // colunaEmailCliente
+            // 
+            this.colunaEmailCliente.Text = "Email";
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(335, 246);
+            this.ClientSize = new System.Drawing.Size(714, 358);
+            this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonPesquisarCliente);
             this.Controls.Add(this.textBoxPesquisaNomeCliente);
             this.Controls.Add(this.buttonMostrarTodosClientes);
@@ -214,6 +257,7 @@
             this.Controls.Add(this.labelNomeCadastroCliente);
             this.Name = "FormClientes";
             this.Text = "Clientes";
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -237,5 +281,10 @@
         private System.Windows.Forms.Button buttonMostrarTodosClientes;
         private System.Windows.Forms.TextBox textBoxPesquisaNomeCliente;
         private System.Windows.Forms.Button buttonPesquisarCliente;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.ListView listViewClientes;
+        private System.Windows.Forms.ColumnHeader colunaNomeCliente;
+        private System.Windows.Forms.ColumnHeader colunaIdadeCliente;
+        private System.Windows.Forms.ColumnHeader colunaEmailCliente;
     }
 }
