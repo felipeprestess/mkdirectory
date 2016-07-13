@@ -59,9 +59,9 @@ namespace CadastroCliente
         //Listar todos clientes
         public void listarTodosClientes()
         {
-            foreach (Cliente ClienteDaLista in listaClientes)
-            { 
-                //MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}", ClienteDaLista.nome, ClienteDaLista.idade, ClienteDaLista.email, ClienteDaLista.telefone));
+            foreach (Cliente cliente in listaClientes)
+            {
+                MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}\nSexo: {4}",cliente.nome, cliente.idade, cliente.email, cliente.telefone, cliente.sexo));
             }
         }
       

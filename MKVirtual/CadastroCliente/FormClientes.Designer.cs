@@ -49,6 +49,7 @@
             this.colunaNomeCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colunaIdadeCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.colunaEmailCliente = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.labelTotalClientes = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -233,11 +234,21 @@
             // 
             this.colunaEmailCliente.Text = "Email";
             // 
+            // labelTotalClientes
+            // 
+            this.labelTotalClientes.AutoSize = true;
+            this.labelTotalClientes.Location = new System.Drawing.Point(535, 14);
+            this.labelTotalClientes.Name = "labelTotalClientes";
+            this.labelTotalClientes.Size = new System.Drawing.Size(83, 13);
+            this.labelTotalClientes.TabIndex = 18;
+            this.labelTotalClientes.Text = "Total Clientes: 0";
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(714, 358);
+            this.Controls.Add(this.labelTotalClientes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonPesquisarCliente);
             this.Controls.Add(this.textBoxPesquisaNomeCliente);
@@ -286,5 +297,6 @@
         private System.Windows.Forms.ColumnHeader colunaNomeCliente;
         private System.Windows.Forms.ColumnHeader colunaIdadeCliente;
         private System.Windows.Forms.ColumnHeader colunaEmailCliente;
+        private System.Windows.Forms.Label labelTotalClientes;
     }
 }

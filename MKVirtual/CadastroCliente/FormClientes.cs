@@ -36,6 +36,7 @@ namespace CadastroCliente
 
             cliente.adicionaCliente(nome, idade, email, fone, sexo);
             limpaCampoCadastroCliente();
+            labelTotalClientes.Text = "Total clientes: " + cliente.listaClientes.Count;
         }
 
         private void buttonLimpaCamposCliente_Click(object sender, EventArgs e)
@@ -72,8 +73,13 @@ namespace CadastroCliente
 
         private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
         {
-            
+            Cliente clienteListado = new Cliente() { Nome = textBoxNomeCliente.Text, Idade = int.Parse(textBoxIdadeCadastroCliente.Text), Email = textBoxEmailCliente.Text, Telefone = int.Parse(textBoxTelefoneCliente.Text) };
+            List<Cliente> NovaLista = new List<Cliente>();
+            NovaLista = cliente.listaClientes;
+            bool teste = true;
             cliente.listarTodosClientes();
+            //listViewClientes.Items.Add(cliente.listaClientes);
+            //listViewClientes.Items.Add("Telefone");
             listViewClientes.Show();
             
             
@@ -98,7 +104,7 @@ namespace CadastroCliente
 
         private void listViewClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            cliente.listarTodosClientes();
         }
     }
 }
