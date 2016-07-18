@@ -57,12 +57,12 @@ namespace CadastroCliente
         }
         
         //Listar todos clientes
-        public void listarTodosClientes()
+        public List<Cliente> listarTodosClientes()
         {
-            foreach (Cliente cliente in listaClientes)
-            {
-                MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}\nSexo: {4}",cliente.nome, cliente.idade, cliente.email, cliente.telefone, cliente.sexo));
-            }
+            //foreach (Cliente cliente in listaClientes)
+            //    MessageBox.Show(string.Format("Nome: {0}\nIdade: {1}\nEmail: {2}\nTelefone: {3}\nSexo: {4}",cliente.nome, cliente.idade, cliente.email, cliente.telefone, cliente.sexo));
+
+            return listaClientes;
         }
       
         

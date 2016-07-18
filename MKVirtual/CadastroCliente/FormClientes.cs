@@ -73,14 +73,23 @@ namespace CadastroCliente
 
         private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
         {
-            Cliente clienteListado = new Cliente() { Nome = textBoxNomeCliente.Text, Idade = int.Parse(textBoxIdadeCadastroCliente.Text), Email = textBoxEmailCliente.Text, Telefone = int.Parse(textBoxTelefoneCliente.Text) };
-            List<Cliente> NovaLista = new List<Cliente>();
-            NovaLista = cliente.listaClientes;
-            bool teste = true;
-            cliente.listarTodosClientes();
-            //listViewClientes.Items.Add(cliente.listaClientes);
-            //listViewClientes.Items.Add("Telefone");
-            listViewClientes.Show();
+           
+            
+            dataGridView1.DataSource = cliente.listarTodosClientes();
+            DataTable table = new DataTable();
+            dataGridView1.DataSource = table;
+            List<Cliente> LsTemp = cliente.listarTodosClientes();
+            var columns = from t in LsTemp
+                          orderby t.Nome
+                          select new
+                          {
+                              Nome = t.Nome,
+                              Email = t.Email,
+                              Telefone = t.Telefone,
+                              
+                          };
+            dataGridView1.DataSource = columns.ToList();
+            dataGridView1.Show();
             
             
         }
@@ -105,6 +114,11 @@ namespace CadastroCliente
         private void listViewClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             cliente.listarTodosClientes();
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }
