@@ -27,8 +27,8 @@ namespace CadastroCliente
             set { email = value; }
         }
 
-        int telefone;
-        public int Telefone
+        string telefone;
+        public string Telefone
         {
             get { return telefone; }
             set { telefone = value; }
@@ -69,7 +69,7 @@ namespace CadastroCliente
 
 
         /*Método de adicionar cliente*/
-        public void adicionaCliente(string nome, int idade, string email, int fone, string sexo)
+        public void adicionaCliente(string nome, int idade, string email, string fone, string sexo)
         {
             Cliente person = new Cliente() { Nome = nome, Idade = idade, Email = email, Telefone = fone, Sexo = sexo };
             listaClientes.Add(person);

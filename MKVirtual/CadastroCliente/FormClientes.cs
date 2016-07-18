@@ -27,7 +27,7 @@ namespace CadastroCliente
             string nome = textBoxNomeCliente.Text;
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
-            int fone = int.Parse(textBoxTelefoneCliente.Text);
+            string fone = textBoxTelefoneCliente.Text;
             string sexo = "";
             if (radioButtonSexoFemininoCliente.Checked)
                 sexo = "Feminino";
@@ -89,6 +89,7 @@ namespace CadastroCliente
                               
                           };
             dataGridView1.DataSource = columns.ToList();
+            dataGridView1.Visible = true;
             dataGridView1.Show();
             
             
@@ -117,6 +118,60 @@ namespace CadastroCliente
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonLimpaCamposCliente_Click_1(object sender, EventArgs e)
+        {
+            limpaCampoCadastroCliente();
+        }
+
+        private void buttonAdicionaCliente_Click_1(object sender, EventArgs e)
+        {
+            string nome = textBoxNomeCliente.Text;
+            int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
+            string email = textBoxEmailCliente.Text;
+            string fone = textBoxTelefoneCliente.Text;
+            string sexo = "";
+            if (radioButtonSexoFemininoCliente.Checked)
+                sexo = "Feminino";
+            else
+                sexo = "Masculino";
+
+            cliente.adicionaCliente(nome, idade, email, fone, sexo);
+            limpaCampoCadastroCliente();
+            labelTotalClientes.Text = "Total clientes: " + cliente.listaClientes.Count;
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void buttonLimpaCamposCliente_Click_2(object sender, EventArgs e)
+        {
+            limpaCampoCadastroCliente();
+        }
+
+        private void buttonAdicionaCliente_Click_2(object sender, EventArgs e)
+        {
+            string nome = textBoxNomeCliente.Text;
+            int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
+            string email = textBoxEmailCliente.Text;
+            string fone = textBoxTelefoneCliente.Text;
+            string sexo = "";
+            if (radioButtonSexoFemininoCliente.Checked)
+                sexo = "Feminino";
+            else
+                sexo = "Masculino";
+
+            cliente.adicionaCliente(nome, idade, email, fone, sexo);
+            limpaCampoCadastroCliente();
+            labelTotalClientes.Text = "Total clientes: " + cliente.listaClientes.Count;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
         {
 
         }
