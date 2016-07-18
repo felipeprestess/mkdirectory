@@ -76,21 +76,25 @@ namespace CadastroCliente
            
             
             dataGridView1.DataSource = cliente.listarTodosClientes();
-            DataTable table = new DataTable();
-            dataGridView1.DataSource = table;
-            List<Cliente> LsTemp = cliente.listarTodosClientes();
-            var columns = from t in LsTemp
-                          orderby t.Nome
-                          select new
-                          {
-                              Nome = t.Nome,
-                              Email = t.Email,
-                              Telefone = t.Telefone,
-                              
-                          };
-            dataGridView1.DataSource = columns.ToList();
-            dataGridView1.Visible = true;
-            dataGridView1.Show();
+            if (cliente.listaClientes.Count > 0)
+            {
+                DataTable table = new DataTable();
+                dataGridView1.DataSource = table;
+                List<Cliente> LsTemp = cliente.listarTodosClientes();
+                var columns = from t in LsTemp
+                              orderby t.Nome
+                              select new
+                              {
+                                  Nome = t.Nome,
+                                  Email = t.Email,
+                                  Telefone = t.Telefone,
+
+                              };
+                dataGridView1.DataSource = columns.ToList();
+                dataGridView1.Visible = true;
+                dataGridView1.Show();
+            }
+            
             
             
         }
