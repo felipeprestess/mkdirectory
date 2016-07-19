@@ -1,0 +1,19 @@
+﻿<Window x:Class="MKVirtualWPF.WindowCliente"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Cadastro de Cliente" Height="300" Width="329">
+    <Grid Background="White" RenderTransformOrigin="0.514,0.509" Margin="0,0,-8,0">
+        <GroupBox Header="Detalhes do cliente" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Height="232" Width="280"/>
+        <Label Content="Nome" HorizontalAlignment="Left" Margin="21,34,0,0" VerticalAlignment="Top"/>
+        <Label Content="Email" HorizontalAlignment="Left" Margin="21,60,0,0" VerticalAlignment="Top"/>
+        <Label Content="Data de Nascimento" HorizontalAlignment="Left" Margin="21,91,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.079,0.192"/>
+        <Label Content="Telefone" HorizontalAlignment="Left" Margin="21,122,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="textBoxNomeCliente" HorizontalAlignment="Left" Height="23" Margin="86,34,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <TextBox x:Name="textBoxEmailCliente" HorizontalAlignment="Left" Height="23" Margin="86,62,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="156"/>
+        <TextBox HorizontalAlignment="Left" Height="23" Margin="87,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
+        <Button Content="Salvar" HorizontalAlignment="Left" Margin="74,188,0,0" VerticalAlignment="Top" Width="75" Background="#FFE2D8D8"/>
+        <Label Content="Sexo" HorizontalAlignment="Left" Margin="21,152,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Feminino" HorizontalAlignment="Left" Margin="87,159,0,0" VerticalAlignment="Top"/>
+        <RadioButton Content="Masculino" HorizontalAlignment="Left" Margin="171,158,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
