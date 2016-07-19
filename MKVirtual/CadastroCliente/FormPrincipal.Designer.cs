@@ -71,7 +71,7 @@
             // 
             // buttonClientes
             // 
-            this.buttonClientes.Location = new System.Drawing.Point(12, 35);
+            this.buttonClientes.Location = new System.Drawing.Point(12, 43);
             this.buttonClientes.Name = "buttonClientes";
             this.buttonClientes.Size = new System.Drawing.Size(75, 23);
             this.buttonClientes.TabIndex = 0;
@@ -360,7 +360,7 @@
             // 
             // buttonPrincipalFinanceiro
             // 
-            this.buttonPrincipalFinanceiro.Location = new System.Drawing.Point(13, 94);
+            this.buttonPrincipalFinanceiro.Location = new System.Drawing.Point(12, 85);
             this.buttonPrincipalFinanceiro.Name = "buttonPrincipalFinanceiro";
             this.buttonPrincipalFinanceiro.Size = new System.Drawing.Size(75, 23);
             this.buttonPrincipalFinanceiro.TabIndex = 5;
