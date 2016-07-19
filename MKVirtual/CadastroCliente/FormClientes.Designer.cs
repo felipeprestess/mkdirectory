@@ -32,9 +32,10 @@
             this.textBoxPesquisaNomeCliente = new System.Windows.Forms.TextBox();
             this.buttonPesquisarCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.labelTotalClientes = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.textBoxTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.radioButtonSexoMasculinoCliente = new System.Windows.Forms.RadioButton();
             this.radioButtonSexoFemininoCliente = new System.Windows.Forms.RadioButton();
             this.labelSexoCadastroCliente = new System.Windows.Forms.Label();
@@ -47,10 +48,9 @@
             this.labelEmailCadastroCliente = new System.Windows.Forms.Label();
             this.labelIdadeCadastroCliente = new System.Windows.Forms.Label();
             this.labelNomeCadastroCliente = new System.Windows.Forms.Label();
-            this.textBoxTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -83,22 +83,22 @@
             // 
             // panel1
             // 
-            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Controls.Add(this.dataGridViewClientes);
             this.panel1.Location = new System.Drawing.Point(38, 90);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(338, 188);
             this.panel1.TabIndex = 17;
             // 
-            // dataGridView1
+            // dataGridViewClientes
             // 
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.Size = new System.Drawing.Size(338, 188);
-            this.dataGridView1.TabIndex = 0;
-            this.dataGridView1.Visible = false;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
+            this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClientes.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dataGridViewClientes.Location = new System.Drawing.Point(0, 0);
+            this.dataGridViewClientes.Name = "dataGridViewClientes";
+            this.dataGridViewClientes.Size = new System.Drawing.Size(338, 188);
+            this.dataGridViewClientes.TabIndex = 0;
+            this.dataGridViewClientes.Visible = false;
+            this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick_2);
             // 
             // labelTotalClientes
             // 
@@ -130,6 +130,16 @@
             this.groupBox1.TabIndex = 27;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Detalhes do Cliente";
+            // 
+            // textBoxTelefoneCliente
+            // 
+            this.textBoxTelefoneCliente.Culture = new System.Globalization.CultureInfo("pt-BR");
+            this.textBoxTelefoneCliente.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
+            this.textBoxTelefoneCliente.Location = new System.Drawing.Point(87, 113);
+            this.textBoxTelefoneCliente.Mask = "(999) 0000-0000";
+            this.textBoxTelefoneCliente.Name = "textBoxTelefoneCliente";
+            this.textBoxTelefoneCliente.Size = new System.Drawing.Size(100, 20);
+            this.textBoxTelefoneCliente.TabIndex = 40;
             // 
             // radioButtonSexoMasculinoCliente
             // 
@@ -240,16 +250,6 @@
             this.labelNomeCadastroCliente.TabIndex = 27;
             this.labelNomeCadastroCliente.Text = "Nome";
             // 
-            // textBoxTelefoneCliente
-            // 
-            this.textBoxTelefoneCliente.Culture = new System.Globalization.CultureInfo("pt-BR");
-            this.textBoxTelefoneCliente.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            this.textBoxTelefoneCliente.Location = new System.Drawing.Point(87, 113);
-            this.textBoxTelefoneCliente.Mask = "(999) 0000-0000";
-            this.textBoxTelefoneCliente.Name = "textBoxTelefoneCliente";
-            this.textBoxTelefoneCliente.Size = new System.Drawing.Size(100, 20);
-            this.textBoxTelefoneCliente.TabIndex = 40;
-            // 
             // button1
             // 
             this.button1.Location = new System.Drawing.Point(241, 14);
@@ -264,6 +264,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(714, 358);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox1);
@@ -275,7 +276,7 @@
             this.Name = "FormClientes";
             this.Text = "Clientes";
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);
@@ -290,7 +291,7 @@
         private System.Windows.Forms.Button buttonPesquisarCliente;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelTotalClientes;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView dataGridViewClientes;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.RadioButton radioButtonSexoMasculinoCliente;
         private System.Windows.Forms.RadioButton radioButtonSexoFemininoCliente;

@@ -13,6 +13,5 @@
         <Button Content="Clientes" HorizontalAlignment="Left" Margin="67,95,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click"/>
         <Button Content="Produtos" HorizontalAlignment="Left" Margin="67,120,0,0" VerticalAlignment="Top" Width="75"/>
         <Button Content="Financeiro" HorizontalAlignment="Left" Margin="67,145,0,0" VerticalAlignment="Top" Width="75"/>
-        <Viewbox Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="159,63,0,0" VerticalAlignment="Top" Width="100"/>
     </Grid>
 </Window>

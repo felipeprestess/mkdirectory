@@ -75,11 +75,11 @@ namespace CadastroCliente
         {
            
             
-            dataGridView1.DataSource = cliente.listarTodosClientes();
+            dataGridViewClientes.DataSource = cliente.listarTodosClientes();
             if (cliente.listaClientes.Count > 0)
             {
                 DataTable table = new DataTable();
-                dataGridView1.DataSource = table;
+                dataGridViewClientes.DataSource = table;
                 List<Cliente> LsTemp = cliente.listarTodosClientes();
                 var columns = from t in LsTemp
                               orderby t.Nome
@@ -90,9 +90,9 @@ namespace CadastroCliente
                                   Telefone = t.Telefone,
 
                               };
-                dataGridView1.DataSource = columns.ToList();
-                dataGridView1.Visible = true;
-                dataGridView1.Show();
+                dataGridViewClientes.DataSource = columns.ToList();
+                dataGridViewClientes.Visible = true;
+                dataGridViewClientes.Show();
             }
             
             

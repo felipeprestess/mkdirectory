@@ -47,12 +47,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AboutMK.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AboutMK.Designer.cs">
+      <DependentUpon>AboutMK.cs</DependentUpon>
+    </Compile>
     <Compile Include="Cliente.cs" />
     <Compile Include="FormFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FormFinanceiro.Designer.cs">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormLogin.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormLogin.Designer.cs">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FormParceiras.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormParceiras.Designer.cs">
+      <DependentUpon>FormParceiras.cs</DependentUpon>
     </Compile>
     <Compile Include="FormPrincipal.cs">
       <SubType>Form</SubType>
@@ -72,11 +90,26 @@
     <Compile Include="FormProdutos.Designer.cs">
       <DependentUpon>FormProdutos.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormVendas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormVendas.Designer.cs">
+      <DependentUpon>FormVendas.cs</DependentUpon>
+    </Compile>
     <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AboutMK.resx">
+      <DependentUpon>AboutMK.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FormFinanceiro.resx">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormLogin.resx">
+      <DependentUpon>FormLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormParceiras.resx">
+      <DependentUpon>FormParceiras.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormPrincipal.resx">
       <DependentUpon>FormPrincipal.cs</DependentUpon>
@@ -86,6 +119,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="FormProdutos.resx">
       <DependentUpon>FormProdutos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormVendas.resx">
+      <DependentUpon>FormVendas.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
