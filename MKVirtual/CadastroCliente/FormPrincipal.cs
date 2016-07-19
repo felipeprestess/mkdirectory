@@ -41,5 +41,17 @@ namespace CadastroCliente
             FormFinanceiro form = new FormFinanceiro();
             form.Show();
         }
+
+        private void subMenuCriarNovoCliente_Click(object sender, EventArgs e)
+        {
+            FormClientes formClientes = new FormClientes();
+            formClientes.Show();
+        }
+
+        private void subMenuCriarNovoProduto_Click(object sender, EventArgs e)
+        {
+            FormProdutos formProduto = new FormProdutos();
+            formProduto.Show();
+        }
     }
 }
