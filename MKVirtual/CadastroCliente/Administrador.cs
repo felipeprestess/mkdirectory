@@ -15,6 +15,10 @@ namespace CadastroCliente
         public List<Parceira> listaParceiras = new List<Parceira>();
         public List<Produto> listaProduto = new List<Produto>();
         public List<Usuario> listaUsuarios = new List<Usuario>();
+        public AutoCompleteStringCollection listaItens =  new AutoCompleteStringCollection();
+
+
+        
 
 
         //Pesquisar por cliente

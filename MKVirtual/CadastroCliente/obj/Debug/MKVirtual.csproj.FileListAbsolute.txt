@@ -37,3 +37,4 @@ C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Deb
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormParceiras.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormAdm.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormNovaVenda.resources
+C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormConfiguracao.resources

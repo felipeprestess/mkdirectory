@@ -11,10 +11,10 @@ namespace CadastroCliente
 {
     public partial class FormPrincipal : Form
     {
-        
         public FormPrincipal()
         {
             InitializeComponent();
+            
             
             
         }
@@ -22,6 +22,7 @@ namespace CadastroCliente
         private void Form1_Load(object sender, EventArgs e)
         {
             linkLabelMaryKayPortal.Links.Add(0, linkLabelMaryKayPortal.Text.Length, "http://www.marykay.com.br/");
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -105,6 +106,12 @@ namespace CadastroCliente
         {
             FormNovaVenda formNovaVenda = new FormNovaVenda();
             formNovaVenda.Show();
+        }
+
+        private void optionsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormConfiguracao formConfiguracao = new FormConfiguracao();
+            formConfiguracao.Show();
         }
     }
 }

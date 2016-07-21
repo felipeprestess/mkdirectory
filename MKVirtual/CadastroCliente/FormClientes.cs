@@ -103,6 +103,8 @@ namespace CadastroCliente
 
         private void buttonPesquisarCliente_Click(object sender, EventArgs e)
         { 
+            if(String.IsNullOrEmpty(textBoxPesquisaNomeCliente.Text))
+                MessageBox.Show("Insira um nome!","Ops...");
             Cliente clientePesquisadoUser = new Cliente() { Nome = textBoxPesquisaNomeCliente.Text };
             adm.pesquisarCliente(clientePesquisadoUser);
             limpaCampoCadastroCliente();
@@ -187,6 +189,16 @@ namespace CadastroCliente
         }
 
         private void FormClientes_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void buttonNovoCliente_Click(object sender, EventArgs e)
+        {
+            groupBoxNovoCliente.Visible = true;
+        }
+
+        private void textBoxPesquisaNomeCliente_TextChanged(object sender, EventArgs e)
         {
 
         }

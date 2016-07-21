@@ -34,7 +34,7 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.labelTotalClientes = new System.Windows.Forms.Label();
-            this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.groupBoxNovoCliente = new System.Windows.Forms.GroupBox();
             this.textBoxEnderecoCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNomeConsultoraCliente = new System.Windows.Forms.TextBox();
@@ -53,9 +53,10 @@
             this.labelIdadeCadastroCliente = new System.Windows.Forms.Label();
             this.labelNomeCadastroCliente = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.buttonNovoCliente = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
-            this.groupBox1.SuspendLayout();
+            this.groupBoxNovoCliente.SuspendLayout();
             this.SuspendLayout();
             // 
             // buttonMostrarTodosClientes
@@ -74,6 +75,7 @@
             this.textBoxPesquisaNomeCliente.Name = "textBoxPesquisaNomeCliente";
             this.textBoxPesquisaNomeCliente.Size = new System.Drawing.Size(100, 20);
             this.textBoxPesquisaNomeCliente.TabIndex = 15;
+            this.textBoxPesquisaNomeCliente.TextChanged += new System.EventHandler(this.textBoxPesquisaNomeCliente_TextChanged);
             // 
             // buttonPesquisarCliente
             // 
@@ -113,31 +115,32 @@
             this.labelTotalClientes.TabIndex = 18;
             this.labelTotalClientes.Text = "Total Clientes: 0";
             // 
-            // groupBox1
+            // groupBoxNovoCliente
             // 
-            this.groupBox1.Controls.Add(this.textBoxEnderecoCliente);
-            this.groupBox1.Controls.Add(this.label2);
-            this.groupBox1.Controls.Add(this.textBoxNomeConsultoraCliente);
-            this.groupBox1.Controls.Add(this.label1);
-            this.groupBox1.Controls.Add(this.textBoxTelefoneCliente);
-            this.groupBox1.Controls.Add(this.radioButtonSexoMasculinoCliente);
-            this.groupBox1.Controls.Add(this.radioButtonSexoFemininoCliente);
-            this.groupBox1.Controls.Add(this.labelSexoCadastroCliente);
-            this.groupBox1.Controls.Add(this.labelTelefoneCadastroCliente);
-            this.groupBox1.Controls.Add(this.textBoxIdadeCadastroCliente);
-            this.groupBox1.Controls.Add(this.buttonLimpaCamposCliente);
-            this.groupBox1.Controls.Add(this.buttonAdicionaCliente);
-            this.groupBox1.Controls.Add(this.textBoxEmailCliente);
-            this.groupBox1.Controls.Add(this.textBoxNomeCliente);
-            this.groupBox1.Controls.Add(this.labelEmailCadastroCliente);
-            this.groupBox1.Controls.Add(this.labelIdadeCadastroCliente);
-            this.groupBox1.Controls.Add(this.labelNomeCadastroCliente);
-            this.groupBox1.Location = new System.Drawing.Point(408, 63);
-            this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(266, 275);
-            this.groupBox1.TabIndex = 27;
-            this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Detalhes do Cliente";
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxEnderecoCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.label2);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxNomeConsultoraCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.label1);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxTelefoneCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.radioButtonSexoMasculinoCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.radioButtonSexoFemininoCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.labelSexoCadastroCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.labelTelefoneCadastroCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxIdadeCadastroCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.buttonLimpaCamposCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.buttonAdicionaCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxEmailCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.textBoxNomeCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.labelEmailCadastroCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.labelIdadeCadastroCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.labelNomeCadastroCliente);
+            this.groupBoxNovoCliente.Location = new System.Drawing.Point(408, 63);
+            this.groupBoxNovoCliente.Name = "groupBoxNovoCliente";
+            this.groupBoxNovoCliente.Size = new System.Drawing.Size(266, 275);
+            this.groupBoxNovoCliente.TabIndex = 27;
+            this.groupBoxNovoCliente.TabStop = false;
+            this.groupBoxNovoCliente.Text = "Detalhes do Cliente";
+            this.groupBoxNovoCliente.Visible = false;
             // 
             // textBoxEnderecoCliente
             // 
@@ -300,14 +303,25 @@
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // buttonNovoCliente
+            // 
+            this.buttonNovoCliente.Location = new System.Drawing.Point(337, 13);
+            this.buttonNovoCliente.Name = "buttonNovoCliente";
+            this.buttonNovoCliente.Size = new System.Drawing.Size(82, 24);
+            this.buttonNovoCliente.TabIndex = 29;
+            this.buttonNovoCliente.Text = "Novo Cliente";
+            this.buttonNovoCliente.UseVisualStyleBackColor = true;
+            this.buttonNovoCliente.Click += new System.EventHandler(this.buttonNovoCliente_Click);
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(714, 358);
+            this.Controls.Add(this.buttonNovoCliente);
             this.Controls.Add(this.button1);
-            this.Controls.Add(this.groupBox1);
+            this.Controls.Add(this.groupBoxNovoCliente);
             this.Controls.Add(this.labelTotalClientes);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.buttonPesquisarCliente);
@@ -318,8 +332,8 @@
             this.Load += new System.EventHandler(this.FormClientes_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
-            this.groupBox1.ResumeLayout(false);
-            this.groupBox1.PerformLayout();
+            this.groupBoxNovoCliente.ResumeLayout(false);
+            this.groupBoxNovoCliente.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -333,7 +347,7 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label labelTotalClientes;
         private System.Windows.Forms.DataGridView dataGridViewClientes;
-        private System.Windows.Forms.GroupBox groupBox1;
+        private System.Windows.Forms.GroupBox groupBoxNovoCliente;
         private System.Windows.Forms.RadioButton radioButtonSexoMasculinoCliente;
         private System.Windows.Forms.RadioButton radioButtonSexoFemininoCliente;
         private System.Windows.Forms.Label labelSexoCadastroCliente;
@@ -352,5 +366,6 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxEnderecoCliente;
+        private System.Windows.Forms.Button buttonNovoCliente;
     }
 }
