@@ -35,3 +35,4 @@ C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Deb
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormVendas.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormLogin.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormParceiras.resources
+C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormAdm.resources

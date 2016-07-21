@@ -11,11 +11,11 @@ namespace CadastroCliente
 {
     public partial class FormProdutos : Form
     {
-        Produto produto;
+        
         public FormProdutos()
         {
             InitializeComponent();
-            produto = new Produto();
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
@@ -25,12 +25,12 @@ namespace CadastroCliente
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
-            produto.NomeProduto = textBoxNomeCadastroProduto.Text;
+            
         }
 
         private void textBoxPrecoCadastroProduto_TextChanged(object sender, EventArgs e)
         {
-            produto.PrecoProduto = Convert.ToDecimal(textBoxPrecoCadastroProduto.Text);
+            
         }
     }
 }

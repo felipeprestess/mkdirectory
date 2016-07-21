@@ -53,7 +53,14 @@
     <Compile Include="AboutMK.Designer.cs">
       <DependentUpon>AboutMK.cs</DependentUpon>
     </Compile>
+    <Compile Include="Administrador.cs" />
     <Compile Include="Cliente.cs" />
+    <Compile Include="FormAdm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FormAdm.Designer.cs">
+      <DependentUpon>FormAdm.cs</DependentUpon>
+    </Compile>
     <Compile Include="FormFinanceiro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,11 +103,16 @@
     <Compile Include="FormVendas.Designer.cs">
       <DependentUpon>FormVendas.cs</DependentUpon>
     </Compile>
+    <Compile Include="Parceira.cs" />
+    <Compile Include="Usuario.cs" />
     <Compile Include="Produto.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="AboutMK.resx">
       <DependentUpon>AboutMK.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FormAdm.resx">
+      <DependentUpon>FormAdm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormFinanceiro.resx">
       <DependentUpon>FormFinanceiro.cs</DependentUpon>

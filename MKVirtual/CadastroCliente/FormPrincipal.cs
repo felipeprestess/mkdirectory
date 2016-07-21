@@ -88,5 +88,11 @@ namespace CadastroCliente
             FormParceiras formParceiras = new FormParceiras();
             formParceiras.Show();
         }
+
+        private void meuPerfilToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormAdm formAdm = new FormAdm();
+            formAdm.Show();
+        }
     }
 }

@@ -8,36 +8,26 @@ namespace CadastroCliente
 {
     public class Produto
     {
-        public string NomeProduto { get; set; }
-        public string TipoProduto { get; set; }
-        public decimal PrecoProduto { get; set; }
+        private string nomeProduto {
+            get { return nomeProduto; }
+            set { nomeProduto = value; }
+        }
+        private string tipoProduto {
+            get { return tipoProduto; }
+            set { tipoProduto = value; }
+        }
+        private decimal precoProduto {
+            get { return precoProduto; }
+            set { precoProduto = value; }
+        }
+        private string linhaProduto;
+        public string LinhaProduto {
+            get { return linhaProduto; }
+            set { linhaProduto = value; }
+        }
 
         public Produto(){}
 
-        public void adicionaProduto(string nome, string tipo, decimal preco)
-        {
-            try
-            {
-                Produto produto = new Produto();
-                nome = produto.NomeProduto;
-                tipo = produto.TipoProduto;
-                preco = produto.PrecoProduto;
-                List<Produto> listaProduto = new List<Produto>();
-                listaProduto.Add(produto);
-
-                foreach (var item in listaProduto)
-                {
-                    MessageBox.Show("Cliente: " + item.NomeProduto + " adicionado com sucesso!", "Cadastro Produto");
-                }
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Mensagem: " + e.Message);
-            }
-            
-
-
-
-        }
+        
     }
 }

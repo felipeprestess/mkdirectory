@@ -11,20 +11,19 @@ namespace CadastroCliente
 {
     public partial class FormClientes : Form
     {
-        Cliente cliente;
+        Administrador adm;
         
         
         public FormClientes()
         {
             InitializeComponent();
-            cliente = new Cliente();
-            //cliente.adicionaCliente(textBoxNomeCliente.Text, Convert.ToInt32(textBoxIdadeCadastroCliente.Text), textBoxEmailCliente.Text);
-            
+            adm = new Administrador(); 
         }
 
         private void buttonAdicionaCliente_Click(object sender, EventArgs e)
         {
             string nome = textBoxNomeCliente.Text;
+            string endereco = textBoxEnderecoCliente.Text;
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
@@ -34,9 +33,9 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            cliente.adicionaCliente(nome, idade, email, fone, sexo);
+            adm.registrarCliente(nome, endereco, idade, email, fone, sexo);
             limpaCampoCadastroCliente();
-            labelTotalClientes.Text = "Total clientes: " + cliente.listaClientes.Count;
+            labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
 
         private void buttonLimpaCamposCliente_Click(object sender, EventArgs e)
@@ -47,6 +46,7 @@ namespace CadastroCliente
         private void limpaCampoCadastroCliente()
         {
             textBoxNomeCliente.Clear();
+            textBoxEnderecoCliente.Clear();
             textBoxIdadeCadastroCliente.Clear();
             textBoxEmailCliente.Clear();
             textBoxTelefoneCliente.Clear();
@@ -57,30 +57,30 @@ namespace CadastroCliente
 
         private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
         {
-            cliente.Nome = textBoxNomeCliente.Text;
+            adm.Nome = textBoxNomeCliente.Text;
         }
 
         private void textBoxIdadeCliente_TextChanged(object sender, EventArgs e)
         {
-            cliente.Idade = int.Parse(textBoxIdadeCadastroCliente.Text);
+            adm.Idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             
         }
 
         private void textBoxEmailCliente_TextChanged(object sender, EventArgs e)
         {
-            cliente.Email = textBoxEmailCliente.Text;
+            adm.Email = textBoxEmailCliente.Text;
         }
 
         private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
         {
            
             
-            dataGridViewClientes.DataSource = cliente.listarTodosClientes();
-            if (cliente.listaClientes.Count > 0)
+            dataGridViewClientes.DataSource = adm.listarTodosClientes();
+            if (adm.listaClientes.Count > 0)
             {
                 DataTable table = new DataTable();
                 dataGridViewClientes.DataSource = table;
-                List<Cliente> LsTemp = cliente.listarTodosClientes();
+                List<Cliente> LsTemp = adm.listarTodosClientes();
                 var columns = from t in LsTemp
                               orderby t.Nome
                               select new
@@ -88,7 +88,7 @@ namespace CadastroCliente
                                   Nome = t.Nome,
                                   Email = t.Email,
                                   Telefone = t.Telefone,
-
+                                  Endereco = t.Endereco
                               };
                 dataGridViewClientes.DataSource = columns.ToList();
                 dataGridViewClientes.Visible = true;
@@ -102,7 +102,7 @@ namespace CadastroCliente
         private void buttonPesquisarCliente_Click(object sender, EventArgs e)
         { 
             Cliente clientePesquisadoUser = new Cliente() { Nome = textBoxPesquisaNomeCliente.Text };
-            cliente.pesquisarCliente(clientePesquisadoUser);
+            adm.pesquisarCliente(clientePesquisadoUser);
             limpaCampoCadastroCliente();
         }
 
@@ -118,7 +118,7 @@ namespace CadastroCliente
 
         private void listViewClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
-            cliente.listarTodosClientes();
+            adm.listarTodosClientes();
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
@@ -134,6 +134,7 @@ namespace CadastroCliente
         private void buttonAdicionaCliente_Click_1(object sender, EventArgs e)
         {
             string nome = textBoxNomeCliente.Text;
+            string endereco = textBoxEnderecoCliente.Text;
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
@@ -143,9 +144,9 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            cliente.adicionaCliente(nome, idade, email, fone, sexo);
+            adm.registrarCliente(nome, endereco, idade, email, fone, sexo);
             limpaCampoCadastroCliente();
-            labelTotalClientes.Text = "Total clientes: " + cliente.listaClientes.Count;
+            labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
@@ -161,6 +162,7 @@ namespace CadastroCliente
         private void buttonAdicionaCliente_Click_2(object sender, EventArgs e)
         {
             string nome = textBoxNomeCliente.Text;
+            string endereco = textBoxEnderecoCliente.Text;
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
@@ -170,12 +172,17 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            cliente.adicionaCliente(nome, idade, email, fone, sexo);
+            adm.registrarCliente(nome, endereco, idade, email, fone, sexo);
             limpaCampoCadastroCliente();
-            labelTotalClientes.Text = "Total clientes: " + cliente.listaClientes.Count;
+            labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
 
         private void button1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void FormClientes_Load(object sender, EventArgs e)
         {
 
         }
