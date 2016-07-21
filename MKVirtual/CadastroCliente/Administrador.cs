@@ -32,21 +32,20 @@ namespace CadastroCliente
                 }
             }
         }
-
         //Listar todos clientes
         public List<Cliente> listarTodosClientes()
         {
             return listaClientes;
         }
         /*Método de adicionar cliente*/
-        public void registrarCliente(string nome,string endereco ,int idade, string email, string fone, string sexo)
+        public void registrarCliente(string nome,string endereco ,int idade, string email, string fone, string sexo, string nomeConsultora)
         {
-            Cliente person = new Cliente() { Nome = nome, Endereco = endereco,  Idade = idade, Email = email, Telefone = fone, Sexo = sexo };
+            Cliente person = new Cliente() { Nome = nome, Endereco = endereco,  Idade = idade, Email = email, Telefone = fone, Sexo = sexo, NomeConsultora = nomeConsultora};
             listaClientes.Add(person);
             MessageBox.Show("Cliente adicionado com sucesso!", "Cadastro Cliente");
         }
         /*Método de excluir cliente*/
-        private void removeCliente(Cliente cliente)
+        public void removeCliente(Cliente cliente)
         {
             listaClientes.Remove(cliente);
             MessageBox.Show("Cliente removido!");
@@ -61,6 +60,13 @@ namespace CadastroCliente
         {
             Parceira usr = new Parceira() { NomeParceira = nome, ProdutoVendaParceira = produto, EmailParceira = email };
             listaParceiras.Add(usr);
+            MessageBox.Show("Registro realizado com sucesso!");
+        }
+
+        public void registrarProduto(string nome, string tipo, decimal preco, string linha )
+        {
+            Produto prd = new Produto() { NomeProduto = nome, TipoProduto = tipo, PrecoProduto = preco, LinhaProduto = linha };
+            listaProduto.Add(prd);
             MessageBox.Show("Registro realizado com sucesso!");
         }
     }

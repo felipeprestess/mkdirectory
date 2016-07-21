@@ -8,15 +8,18 @@ namespace CadastroCliente
 {
     public class Produto
     {
-        private string nomeProduto {
+        private string nomeProduto;
+        public string NomeProduto {
             get { return nomeProduto; }
             set { nomeProduto = value; }
         }
-        private string tipoProduto {
+        private string tipoProduto;
+        public string TipoProduto {
             get { return tipoProduto; }
             set { tipoProduto = value; }
         }
-        private decimal precoProduto {
+        private decimal precoProduto;
+        public decimal PrecoProduto {
             get { return precoProduto; }
             set { precoProduto = value; }
         }

@@ -27,13 +27,14 @@ namespace CadastroCliente
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
+            string nomeConsultora = textBoxNomeConsultoraCliente.Text;
             string sexo = "";
             if (radioButtonSexoFemininoCliente.Checked)
                 sexo = "Feminino";
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, idade, email, fone, sexo);
+            adm.registrarCliente(nome, endereco, idade, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
@@ -50,6 +51,7 @@ namespace CadastroCliente
             textBoxIdadeCadastroCliente.Clear();
             textBoxEmailCliente.Clear();
             textBoxTelefoneCliente.Clear();
+            textBoxNomeConsultoraCliente.Clear();
             radioButtonSexoFemininoCliente.Checked = false;
             radioButtonSexoMasculinoCliente.Checked = false;
             textBoxPesquisaNomeCliente.Clear();
@@ -88,7 +90,8 @@ namespace CadastroCliente
                                   Nome = t.Nome,
                                   Email = t.Email,
                                   Telefone = t.Telefone,
-                                  Endereco = t.Endereco
+                                  Endereco = t.Endereco,
+                                  Consultora = t.NomeConsultora
                               };
                 dataGridViewClientes.DataSource = columns.ToList();
                 dataGridViewClientes.Visible = true;
@@ -137,6 +140,7 @@ namespace CadastroCliente
             string endereco = textBoxEnderecoCliente.Text;
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
+            string nomeConsultora = textBoxNomeConsultoraCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
             string sexo = "";
             if (radioButtonSexoFemininoCliente.Checked)
@@ -144,7 +148,7 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, idade, email, fone, sexo);
+            adm.registrarCliente(nome, endereco, idade, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
@@ -166,13 +170,14 @@ namespace CadastroCliente
             int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
+            string nomeConsultora = textBoxNomeConsultoraCliente.Text;
             string sexo = "";
             if (radioButtonSexoFemininoCliente.Checked)
                 sexo = "Feminino";
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, idade, email, fone, sexo);
+            adm.registrarCliente(nome, endereco, idade, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
