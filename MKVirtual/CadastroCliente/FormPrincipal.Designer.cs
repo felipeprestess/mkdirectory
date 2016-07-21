@@ -51,6 +51,7 @@
             this.novoClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.vendasToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.novaVendaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.meuPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.editToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.undoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.redoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -74,7 +75,6 @@
             this.linkLabelMaryKayPortal = new System.Windows.Forms.LinkLabel();
             this.buttonPrincipalEmails = new System.Windows.Forms.Button();
             this.buttonPrincipalParceiras = new System.Windows.Forms.Button();
-            this.meuPerfilToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -82,9 +82,9 @@
             // 
             this.buttonClientes.Location = new System.Drawing.Point(12, 43);
             this.buttonClientes.Name = "buttonClientes";
-            this.buttonClientes.Size = new System.Drawing.Size(75, 23);
+            this.buttonClientes.Size = new System.Drawing.Size(96, 23);
             this.buttonClientes.TabIndex = 0;
-            this.buttonClientes.Text = "Clientes";
+            this.buttonClientes.Text = "Meus Clientes";
             this.buttonClientes.UseVisualStyleBackColor = true;
             this.buttonClientes.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -92,7 +92,7 @@
             // 
             this.buttonProdutos.Location = new System.Drawing.Point(12, 67);
             this.buttonProdutos.Name = "buttonProdutos";
-            this.buttonProdutos.Size = new System.Drawing.Size(75, 23);
+            this.buttonProdutos.Size = new System.Drawing.Size(96, 23);
             this.buttonProdutos.TabIndex = 1;
             this.buttonProdutos.Text = "Produtos";
             this.buttonProdutos.UseVisualStyleBackColor = true;
@@ -247,8 +247,9 @@
             // novoClienteToolStripMenuItem
             // 
             this.novoClienteToolStripMenuItem.Name = "novoClienteToolStripMenuItem";
-            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(143, 22);
+            this.novoClienteToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.novoClienteToolStripMenuItem.Text = "Novo Cliente";
+            this.novoClienteToolStripMenuItem.Click += new System.EventHandler(this.novoClienteToolStripMenuItem_Click);
             // 
             // vendasToolStripMenuItem
             // 
@@ -261,8 +262,16 @@
             // novaVendaToolStripMenuItem
             // 
             this.novaVendaToolStripMenuItem.Name = "novaVendaToolStripMenuItem";
-            this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(138, 22);
+            this.novaVendaToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.novaVendaToolStripMenuItem.Text = "Nova Venda";
+            this.novaVendaToolStripMenuItem.Click += new System.EventHandler(this.novaVendaToolStripMenuItem_Click);
+            // 
+            // meuPerfilToolStripMenuItem
+            // 
+            this.meuPerfilToolStripMenuItem.Name = "meuPerfilToolStripMenuItem";
+            this.meuPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.meuPerfilToolStripMenuItem.Text = "Meu Perfil";
+            this.meuPerfilToolStripMenuItem.Click += new System.EventHandler(this.meuPerfilToolStripMenuItem_Click);
             // 
             // editToolStripMenuItem
             // 
@@ -403,9 +412,9 @@
             // 
             this.buttonPrincipalFinanceiro.Location = new System.Drawing.Point(12, 91);
             this.buttonPrincipalFinanceiro.Name = "buttonPrincipalFinanceiro";
-            this.buttonPrincipalFinanceiro.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrincipalFinanceiro.Size = new System.Drawing.Size(96, 23);
             this.buttonPrincipalFinanceiro.TabIndex = 5;
-            this.buttonPrincipalFinanceiro.Text = "Financeiro";
+            this.buttonPrincipalFinanceiro.Text = "Minhas Contas";
             this.buttonPrincipalFinanceiro.UseVisualStyleBackColor = true;
             this.buttonPrincipalFinanceiro.Click += new System.EventHandler(this.buttonPrincipalFinanceiro_Click);
             // 
@@ -413,9 +422,9 @@
             // 
             this.buttonPrincipalVendas.Location = new System.Drawing.Point(12, 116);
             this.buttonPrincipalVendas.Name = "buttonPrincipalVendas";
-            this.buttonPrincipalVendas.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrincipalVendas.Size = new System.Drawing.Size(96, 23);
             this.buttonPrincipalVendas.TabIndex = 6;
-            this.buttonPrincipalVendas.Text = "Vendas";
+            this.buttonPrincipalVendas.Text = "Minhas Vendas";
             this.buttonPrincipalVendas.UseVisualStyleBackColor = true;
             this.buttonPrincipalVendas.Click += new System.EventHandler(this.buttonPrincipalVendas_Click_1);
             // 
@@ -435,7 +444,7 @@
             // 
             this.buttonPrincipalEmails.Location = new System.Drawing.Point(12, 140);
             this.buttonPrincipalEmails.Name = "buttonPrincipalEmails";
-            this.buttonPrincipalEmails.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrincipalEmails.Size = new System.Drawing.Size(96, 23);
             this.buttonPrincipalEmails.TabIndex = 8;
             this.buttonPrincipalEmails.Text = "Emails";
             this.buttonPrincipalEmails.UseVisualStyleBackColor = true;
@@ -444,18 +453,11 @@
             // 
             this.buttonPrincipalParceiras.Location = new System.Drawing.Point(13, 165);
             this.buttonPrincipalParceiras.Name = "buttonPrincipalParceiras";
-            this.buttonPrincipalParceiras.Size = new System.Drawing.Size(75, 23);
+            this.buttonPrincipalParceiras.Size = new System.Drawing.Size(96, 23);
             this.buttonPrincipalParceiras.TabIndex = 9;
-            this.buttonPrincipalParceiras.Text = "Parceiras";
+            this.buttonPrincipalParceiras.Text = "Minhas Parceiras";
             this.buttonPrincipalParceiras.UseVisualStyleBackColor = true;
             this.buttonPrincipalParceiras.Click += new System.EventHandler(this.buttonPrincipalParceiras_Click);
-            // 
-            // meuPerfilToolStripMenuItem
-            // 
-            this.meuPerfilToolStripMenuItem.Name = "meuPerfilToolStripMenuItem";
-            this.meuPerfilToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
-            this.meuPerfilToolStripMenuItem.Text = "Meu Perfil";
-            this.meuPerfilToolStripMenuItem.Click += new System.EventHandler(this.meuPerfilToolStripMenuItem_Click);
             // 
             // FormPrincipal
             // 

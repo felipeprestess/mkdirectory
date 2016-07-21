@@ -21,7 +21,7 @@ namespace CadastroCliente
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            linkLabelMaryKayPortal.Links.Add(0, linkLabelMaryKayPortal.Text.Length, "http://www.google.com");
+            linkLabelMaryKayPortal.Links.Add(0, linkLabelMaryKayPortal.Text.Length, "http://www.marykay.com.br/");
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -93,6 +93,18 @@ namespace CadastroCliente
         {
             FormAdm formAdm = new FormAdm();
             formAdm.Show();
+        }
+
+        private void novoClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormClientes formCliente = new FormClientes();
+            formCliente.Show();
+        }
+
+        private void novaVendaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormNovaVenda formNovaVenda = new FormNovaVenda();
+            formNovaVenda.Show();
         }
     }
 }

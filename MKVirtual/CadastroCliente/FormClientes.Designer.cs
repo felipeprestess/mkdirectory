@@ -60,7 +60,7 @@
             // 
             // buttonMostrarTodosClientes
             // 
-            this.buttonMostrarTodosClientes.Location = new System.Drawing.Point(439, 5);
+            this.buttonMostrarTodosClientes.Location = new System.Drawing.Point(38, 297);
             this.buttonMostrarTodosClientes.Name = "buttonMostrarTodosClientes";
             this.buttonMostrarTodosClientes.Size = new System.Drawing.Size(89, 23);
             this.buttonMostrarTodosClientes.TabIndex = 14;
@@ -79,7 +79,7 @@
             // 
             this.buttonPesquisarCliente.Location = new System.Drawing.Point(144, 14);
             this.buttonPesquisarCliente.Name = "buttonPesquisarCliente";
-            this.buttonPesquisarCliente.Size = new System.Drawing.Size(75, 20);
+            this.buttonPesquisarCliente.Size = new System.Drawing.Size(75, 23);
             this.buttonPesquisarCliente.TabIndex = 16;
             this.buttonPesquisarCliente.Text = "Pesquisar";
             this.buttonPesquisarCliente.UseVisualStyleBackColor = true;
@@ -107,7 +107,7 @@
             // labelTotalClientes
             // 
             this.labelTotalClientes.AutoSize = true;
-            this.labelTotalClientes.Location = new System.Drawing.Point(535, 14);
+            this.labelTotalClientes.Location = new System.Drawing.Point(35, 281);
             this.labelTotalClientes.Name = "labelTotalClientes";
             this.labelTotalClientes.Size = new System.Drawing.Size(83, 13);
             this.labelTotalClientes.TabIndex = 18;

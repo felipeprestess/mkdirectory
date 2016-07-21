@@ -24,7 +24,6 @@ namespace CadastroCliente
         {
             string nome = textBoxNomeCliente.Text;
             string endereco = textBoxEnderecoCliente.Text;
-            int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
             string nomeConsultora = textBoxNomeConsultoraCliente.Text;
@@ -34,7 +33,7 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, idade, email, fone, sexo, nomeConsultora);
+            adm.registrarCliente(nome, endereco, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
@@ -59,18 +58,18 @@ namespace CadastroCliente
 
         private void textBoxNomeCliente_TextChanged(object sender, EventArgs e)
         {
-            adm.Nome = textBoxNomeCliente.Text;
+            
         }
 
         private void textBoxIdadeCliente_TextChanged(object sender, EventArgs e)
         {
-            adm.Idade = int.Parse(textBoxIdadeCadastroCliente.Text);
+           
             
         }
 
         private void textBoxEmailCliente_TextChanged(object sender, EventArgs e)
         {
-            adm.Email = textBoxEmailCliente.Text;
+            
         }
 
         private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
@@ -138,7 +137,7 @@ namespace CadastroCliente
         {
             string nome = textBoxNomeCliente.Text;
             string endereco = textBoxEnderecoCliente.Text;
-            int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
+           
             string email = textBoxEmailCliente.Text;
             string nomeConsultora = textBoxNomeConsultoraCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
@@ -148,14 +147,14 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, idade, email, fone, sexo, nomeConsultora);
+            adm.registrarCliente(nome, endereco, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
 
         private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
-
+            //DataGridView
         }
 
         private void buttonLimpaCamposCliente_Click_2(object sender, EventArgs e)
@@ -177,7 +176,7 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, idade, email, fone, sexo, nomeConsultora);
+            adm.registrarCliente(nome, endereco, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }

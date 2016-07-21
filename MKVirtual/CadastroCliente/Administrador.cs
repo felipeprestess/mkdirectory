@@ -9,10 +9,8 @@ namespace CadastroCliente
     class Administrador : Usuario
     {//Classe responsável pela administração do sistema
         public Administrador()
-            :base(1)
-        {
+            :base(1){}
 
-        }
         public List<Cliente> listaClientes = new List<Cliente>();
         public List<Parceira> listaParceiras = new List<Parceira>();
         public List<Produto> listaProduto = new List<Produto>();
@@ -38,9 +36,9 @@ namespace CadastroCliente
             return listaClientes;
         }
         /*Método de adicionar cliente*/
-        public void registrarCliente(string nome,string endereco ,int idade, string email, string fone, string sexo, string nomeConsultora)
+        public void registrarCliente(string nome, string endereco, string email, string fone, string sexo, string nomeConsultora)
         {
-            Cliente person = new Cliente() { Nome = nome, Endereco = endereco,  Idade = idade, Email = email, Telefone = fone, Sexo = sexo, NomeConsultora = nomeConsultora};
+            Cliente person = new Cliente() { Nome = nome, Endereco = endereco, Email = email, Telefone = fone, Sexo = sexo, NomeConsultora = nomeConsultora};
             listaClientes.Add(person);
             MessageBox.Show("Cliente adicionado com sucesso!", "Cadastro Cliente");
         }

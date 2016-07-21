@@ -28,12 +28,6 @@ namespace CadastroCliente
             set { endereco = value; }
         }
 
-        private int idade;
-        public virtual int Idade
-        {
-            get { return idade; }
-            set { idade = value; }
-        }
         private string email;
         public virtual string Email
         {

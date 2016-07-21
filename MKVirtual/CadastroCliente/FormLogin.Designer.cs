@@ -30,8 +30,8 @@
         {
             this.labelLoginUsuario = new System.Windows.Forms.Label();
             this.labelLoginSenhaUsuario = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxLogin = new System.Windows.Forms.TextBox();
+            this.textBoxPass = new System.Windows.Forms.TextBox();
             this.buttonLoginEntrar = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
@@ -53,19 +53,19 @@
             this.labelLoginSenhaUsuario.TabIndex = 1;
             this.labelLoginSenhaUsuario.Text = "Senha";
             // 
-            // textBox1
+            // textBoxLogin
             // 
-            this.textBox1.Location = new System.Drawing.Point(83, 57);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
-            this.textBox1.TabIndex = 2;
+            this.textBoxLogin.Location = new System.Drawing.Point(83, 57);
+            this.textBoxLogin.Name = "textBoxLogin";
+            this.textBoxLogin.Size = new System.Drawing.Size(100, 20);
+            this.textBoxLogin.TabIndex = 2;
             // 
-            // textBox2
+            // textBoxPass
             // 
-            this.textBox2.Location = new System.Drawing.Point(83, 96);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
-            this.textBox2.TabIndex = 3;
+            this.textBoxPass.Location = new System.Drawing.Point(83, 96);
+            this.textBoxPass.Name = "textBoxPass";
+            this.textBoxPass.Size = new System.Drawing.Size(100, 20);
+            this.textBoxPass.TabIndex = 3;
             // 
             // buttonLoginEntrar
             // 
@@ -75,15 +75,16 @@
             this.buttonLoginEntrar.TabIndex = 4;
             this.buttonLoginEntrar.Text = "Entrar";
             this.buttonLoginEntrar.UseVisualStyleBackColor = true;
+            this.buttonLoginEntrar.Click += new System.EventHandler(this.buttonLoginEntrar_Click);
             // 
             // FormLogin
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(284, 227);
+            this.ClientSize = new System.Drawing.Size(257, 226);
             this.Controls.Add(this.buttonLoginEntrar);
-            this.Controls.Add(this.textBox2);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.textBoxPass);
+            this.Controls.Add(this.textBoxLogin);
             this.Controls.Add(this.labelLoginSenhaUsuario);
             this.Controls.Add(this.labelLoginUsuario);
             this.Name = "FormLogin";
@@ -97,8 +98,8 @@
 
         private System.Windows.Forms.Label labelLoginUsuario;
         private System.Windows.Forms.Label labelLoginSenhaUsuario;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxLogin;
+        private System.Windows.Forms.TextBox textBoxPass;
         private System.Windows.Forms.Button buttonLoginEntrar;
     }
 }

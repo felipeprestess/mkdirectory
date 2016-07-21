@@ -12,11 +12,17 @@ namespace CadastroCliente
             get { return dataVenda; }
             set { dataVenda = value; }
         }
+        private int qtdProduto;
+        public int QtdProduto {
+            get { return qtdProduto;}
+            set { qtdProduto = value; }
+        }
+
 
         public decimal calcularTotalVenda(Produto prd)
         {
             decimal total = 0;
-            total += prd.PrecoProduto;
+            total += prd.PrecoProduto * QtdProduto;
             return total;
         }
     }

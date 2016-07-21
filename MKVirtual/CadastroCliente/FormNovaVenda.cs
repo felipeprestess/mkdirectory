@@ -9,17 +9,11 @@ using System.Windows.Forms;
 
 namespace CadastroCliente
 {
-    public partial class FormVendas : Form
+    public partial class FormNovaVenda : Form
     {
-        public FormVendas()
+        public FormNovaVenda()
         {
             InitializeComponent();
-        }
-
-        private void buttonNovaVendaVendas_Click(object sender, EventArgs e)
-        {
-            FormNovaVenda formNovaVenda = new FormNovaVenda();
-            formNovaVenda.Show();
         }
     }
 }
