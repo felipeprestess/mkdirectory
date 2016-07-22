@@ -8,12 +8,14 @@ namespace CadastroCliente
 {
     public class Usuario
     {
-        private int nivelAcesso;
+        public int NivelAcesso { get; private set; }
 
         public Usuario(int nivelAcesso)
         {
-            this.nivelAcesso = nivelAcesso;
+            this.NivelAcesso = nivelAcesso;
         }
+
+        public int Id { get; set; }
 
         private string nome;
         public virtual string Nome

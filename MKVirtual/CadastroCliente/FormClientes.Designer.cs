@@ -35,6 +35,7 @@
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.labelTotalClientes = new System.Windows.Forms.Label();
             this.groupBoxNovoCliente = new System.Windows.Forms.GroupBox();
+            this.buttonSalvarAlteracao = new System.Windows.Forms.Button();
             this.dataNascimentoCliente = new System.Windows.Forms.DateTimePicker();
             this.textBoxEnderecoCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
@@ -57,6 +58,7 @@
             this.buttonRemoverCliente = new System.Windows.Forms.Button();
             this.buttonAtualizarDados = new System.Windows.Forms.Button();
             this.labelLinhasSelecionadas = new System.Windows.Forms.Label();
+            this.txtId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.groupBoxNovoCliente.SuspendLayout();
@@ -120,6 +122,8 @@
             // 
             // groupBoxNovoCliente
             // 
+            this.groupBoxNovoCliente.Controls.Add(this.txtId);
+            this.groupBoxNovoCliente.Controls.Add(this.buttonSalvarAlteracao);
             this.groupBoxNovoCliente.Controls.Add(this.dataNascimentoCliente);
             this.groupBoxNovoCliente.Controls.Add(this.textBoxEnderecoCliente);
             this.groupBoxNovoCliente.Controls.Add(this.label2);
@@ -144,6 +148,17 @@
             this.groupBoxNovoCliente.TabStop = false;
             this.groupBoxNovoCliente.Text = "Detalhes do Cliente";
             this.groupBoxNovoCliente.Visible = false;
+            // 
+            // buttonSalvarAlteracao
+            // 
+            this.buttonSalvarAlteracao.Location = new System.Drawing.Point(39, 223);
+            this.buttonSalvarAlteracao.Name = "buttonSalvarAlteracao";
+            this.buttonSalvarAlteracao.Size = new System.Drawing.Size(81, 23);
+            this.buttonSalvarAlteracao.TabIndex = 46;
+            this.buttonSalvarAlteracao.Text = "Salvar";
+            this.buttonSalvarAlteracao.UseVisualStyleBackColor = true;
+            this.buttonSalvarAlteracao.Visible = false;
+            this.buttonSalvarAlteracao.Click += new System.EventHandler(this.buttonSalvarAlteracao_Click);
             // 
             // dataNascimentoCliente
             // 
@@ -346,6 +361,13 @@
             this.labelLinhasSelecionadas.Text = "Linhas Selecionadas: 0";
             this.labelLinhasSelecionadas.Visible = false;
             // 
+            // txtId
+            // 
+            this.txtId.Location = new System.Drawing.Point(31, 12);
+            this.txtId.Name = "txtId";
+            this.txtId.Size = new System.Drawing.Size(100, 20);
+            this.txtId.TabIndex = 47;
+            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -406,5 +428,7 @@
         private System.Windows.Forms.Button buttonAtualizarDados;
         private System.Windows.Forms.DateTimePicker dataNascimentoCliente;
         private System.Windows.Forms.Label labelLinhasSelecionadas;
+        private System.Windows.Forms.Button buttonSalvarAlteracao;
+        private System.Windows.Forms.TextBox txtId;
     }
 }

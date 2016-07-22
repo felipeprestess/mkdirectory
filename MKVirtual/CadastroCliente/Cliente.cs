@@ -8,34 +8,36 @@ namespace CadastroCliente
 {
     public class Cliente : Usuario
     {
-        public Cliente():
-            base(3){}
+        public Cliente() :
+            base(3) { }
 
         private string enderecoCliente;
-        public override string Endereco {
+        public override string Endereco
+        {
             get { return enderecoCliente; }
-            set { enderecoCliente = value; } 
+            set { enderecoCliente = value; }
         }
 
         private string nomeConsultora;
-        public string NomeConsultora 
+        public string NomeConsultora
         {
             get { return nomeConsultora; }
-            set { nomeConsultora = value;}
+            set { nomeConsultora = value; }
         }
 
         private string produtoInteresse;
-        public string ProdutoInteresse {
+        public string ProdutoInteresse
+        {
             get { return produtoInteresse; }
-            set { produtoInteresse = value;}
+            set { produtoInteresse = value; }
         }
 
-        
-        
-        
 
 
-        
+
+
+
+
 
     }
 }

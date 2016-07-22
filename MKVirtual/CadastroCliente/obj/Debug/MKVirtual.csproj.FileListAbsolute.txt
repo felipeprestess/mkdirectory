@@ -56,3 +56,6 @@ C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\D
 C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.Properties.Resources.resources
 C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\MKVirtual.csproj.GenerateResource.Cache
 C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.pdb
+C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\bin\Debug\CadastroCliente.exe.config
+C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\bin\Debug\MKVirtual.mdf
+C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\bin\Debug\MKVirtual_log.ldf
