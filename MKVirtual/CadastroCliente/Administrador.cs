@@ -22,9 +22,9 @@ namespace CadastroCliente
 
 
         //Pesquisar por cliente
-        public void pesquisarCliente(Cliente cliente)
+        public void pesquisarCliente(string NomeAPesquisar)
         {
-            Cliente ClientePesquisado = new Cliente() { Nome = cliente.Nome };
+            Cliente ClientePesquisado = new Cliente() { Nome = NomeAPesquisar };
             foreach (Cliente clienteDaLista in listaClientes)
             {
                 if (ClientePesquisado.Nome == clienteDaLista.Nome)
@@ -40,9 +40,9 @@ namespace CadastroCliente
             return listaClientes;
         }
         /*Método de adicionar cliente*/
-        public void registrarCliente(string nome, string endereco, string email, string fone, string sexo, string nomeConsultora)
+        public void registrarCliente(string nome, string endereco, string dataNascimento,  string email, string fone, string sexo, string nomeConsultora)
         {
-            Cliente person = new Cliente() { Nome = nome, Endereco = endereco, Email = email, Telefone = fone, Sexo = sexo, NomeConsultora = nomeConsultora};
+            Cliente person = new Cliente() { Nome = nome, Endereco = endereco, DataNascimento = dataNascimento, Email = email, Telefone = fone, Sexo = sexo, NomeConsultora = nomeConsultora};
             listaClientes.Add(person);
             MessageBox.Show("Cliente adicionado com sucesso!", "Cadastro Cliente");
         }

@@ -12,18 +12,21 @@ namespace CadastroCliente
     public partial class FormClientes : Form
     {
         Administrador adm;
-        
-        
+        DataTable table;
+
+
         public FormClientes()
         {
             InitializeComponent();
-            adm = new Administrador(); 
+            adm = new Administrador();
+            table = new DataTable();
         }
 
         private void buttonAdicionaCliente_Click(object sender, EventArgs e)
         {
             string nome = textBoxNomeCliente.Text;
             string endereco = textBoxEnderecoCliente.Text;
+            string dataNascimento = dataNascimentoCliente.Text;
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
             string nomeConsultora = textBoxNomeConsultoraCliente.Text;
@@ -33,7 +36,7 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, email, fone, sexo, nomeConsultora);
+            adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
@@ -47,7 +50,7 @@ namespace CadastroCliente
         {
             textBoxNomeCliente.Clear();
             textBoxEnderecoCliente.Clear();
-            textBoxIdadeCadastroCliente.Clear();
+            dataNascimentoCliente.ResetText();
             textBoxEmailCliente.Clear();
             textBoxTelefoneCliente.Clear();
             textBoxNomeConsultoraCliente.Clear();
@@ -72,6 +75,8 @@ namespace CadastroCliente
             
         }
 
+       
+
         private void buttonMostrarTodosClientes_Click(object sender, EventArgs e)
         {
            
@@ -79,7 +84,7 @@ namespace CadastroCliente
             dataGridViewClientes.DataSource = adm.listarTodosClientes();
             if (adm.listaClientes.Count > 0)
             {
-                DataTable table = new DataTable();
+                
                 dataGridViewClientes.DataSource = table;
                 List<Cliente> LsTemp = adm.listarTodosClientes();
                 var columns = from t in LsTemp
@@ -102,11 +107,11 @@ namespace CadastroCliente
         }
 
         private void buttonPesquisarCliente_Click(object sender, EventArgs e)
-        { 
+        {
+            string nomePesquisado = textBoxPesquisaNomeCliente.Text;
             if(String.IsNullOrEmpty(textBoxPesquisaNomeCliente.Text))
                 MessageBox.Show("Insira um nome!","Ops...");
-            Cliente clientePesquisadoUser = new Cliente() { Nome = textBoxPesquisaNomeCliente.Text };
-            adm.pesquisarCliente(clientePesquisadoUser);
+            adm.pesquisarCliente(nomePesquisado);
             limpaCampoCadastroCliente();
         }
 
@@ -115,19 +120,9 @@ namespace CadastroCliente
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void listViewClientes_SelectedIndexChanged(object sender, EventArgs e)
         {
             adm.listarTodosClientes();
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
         }
 
         private void buttonLimpaCamposCliente_Click_1(object sender, EventArgs e)
@@ -139,7 +134,7 @@ namespace CadastroCliente
         {
             string nome = textBoxNomeCliente.Text;
             string endereco = textBoxEnderecoCliente.Text;
-           
+            string dataNascimento = dataNascimentoCliente.Text;
             string email = textBoxEmailCliente.Text;
             string nomeConsultora = textBoxNomeConsultoraCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
@@ -149,14 +144,9 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, email, fone, sexo, nomeConsultora);
+            adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
-        }
-
-        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
-        {
-            //DataGridView
         }
 
         private void buttonLimpaCamposCliente_Click_2(object sender, EventArgs e)
@@ -168,7 +158,7 @@ namespace CadastroCliente
         {
             string nome = textBoxNomeCliente.Text;
             string endereco = textBoxEnderecoCliente.Text;
-            int idade = int.Parse(textBoxIdadeCadastroCliente.Text);
+            string dataNascimento = dataNascimentoCliente.Text;
             string email = textBoxEmailCliente.Text;
             string fone = textBoxTelefoneCliente.Text;
             string nomeConsultora = textBoxNomeConsultoraCliente.Text;
@@ -178,7 +168,7 @@ namespace CadastroCliente
             else
                 sexo = "Masculino";
 
-            adm.registrarCliente(nome, endereco, email, fone, sexo, nomeConsultora);
+            adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
         }
@@ -201,6 +191,42 @@ namespace CadastroCliente
         private void textBoxPesquisaNomeCliente_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void buttonRemoverCliente_Click(object sender, EventArgs e)
+        {
+            //adm.removeCliente();
+        }
+
+        private void dataGridViewClientes_MouseClick(object sender, MouseEventArgs e)
+        {
+
+        }
+
+        private void dataGridViewClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            labelLinhasSelecionadas.Visible = true;
+            Int32 linhasSelecionadas = dataGridViewClientes.Rows.GetRowCount(DataGridViewElementStates.Selected);
+            if(linhasSelecionadas > 0)
+            {
+                StringBuilder sb = new StringBuilder();
+                for (int i = 0; i < linhasSelecionadas; i++)
+                {
+                    sb.Append("Linha: ");
+                    sb.Append(dataGridViewClientes.SelectedRows[i].Index.ToString());
+                    sb.Append(Environment.NewLine);
+                }
+                sb.Append(labelLinhasSelecionadas.Text + ":" + linhasSelecionadas.ToString());
+            }
+        }
+
+        private void dataGridViewClientes_Click(object sender, EventArgs e)
+        {
+            if (dataGridViewClientes.SelectedRows.Count > 0)
+            {
+                labelLinhasSelecionadas.Visible = true;
+                labelLinhasSelecionadas.Text = "Linhas selecionadas: " + dataGridViewClientes.SelectedRows.Count;
+            }
         }
     }
 }

@@ -38,3 +38,21 @@ C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Deb
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormAdm.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormNovaVenda.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormConfiguracao.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.exe
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\bin\Debug\CadastroCliente.exe
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\bin\Debug\CadastroCliente.pdb
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\MKVirtual.csprojResolveAssemblyReference.cache
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.AboutMK.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormAdm.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormConfiguracao.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormFinanceiro.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormLogin.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormNovaVenda.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormParceiras.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormPrincipal.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormClientes.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormProdutos.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormVendas.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.Properties.Resources.resources
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\MKVirtual.csproj.GenerateResource.Cache
+C:\Users\Felipe Prestes\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.pdb

@@ -9,10 +9,7 @@ namespace CadastroCliente
     public class Cliente : Usuario
     {
         public Cliente():
-            base(3)
-        {
-
-        }
+            base(3){}
 
         private string enderecoCliente;
         public override string Endereco {

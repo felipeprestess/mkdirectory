@@ -40,12 +40,6 @@ namespace CadastroCliente
             string tipoProduto = comboTipoProduto.Text;
             decimal precoProduto = decimal.Parse(textBoxPrecoCadastroProduto.Text);
             string linhaProduto = textBoxLinhaProduto.Text;
-            if(String.IsNullOrEmpty(nomeProduto));  
-                MessageBox.Show("Insira o nome do produto!", "Ops...");
-            if(String.IsNullOrEmpty(tipoProduto));
-                MessageBox.Show("Escolha um tipo de produto!", "Ops...");
-            if(String.IsNullOrEmpty(Convert.ToString(precoProduto)))
-                MessageBox.Show("Insira o preço do produto!", "Ops...");
             adm.registrarProduto(nomeProduto, tipoProduto, precoProduto, linhaProduto);
         }
 

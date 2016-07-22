@@ -22,6 +22,12 @@ namespace CadastroCliente
             set { nome = value; }
         }
 
+        private string dataNascimento;
+        public string DataNascimento {
+            get { return dataNascimento; }
+            set { dataNascimento = value; }
+        }
+
         private string endereco;
         public virtual string Endereco {
             get { return endereco; }
