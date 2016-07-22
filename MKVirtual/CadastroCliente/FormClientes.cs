@@ -22,26 +22,6 @@ namespace CadastroCliente
             table = new DataTable();
         }
 
-        private void buttonAdicionaCliente_Click(object sender, EventArgs e)
-        {
-            string nome = textBoxNomeCliente.Text;
-            string endereco = textBoxEnderecoCliente.Text;
-            string dataNascimento = dataNascimentoCliente.Text;
-            string email = textBoxEmailCliente.Text;
-            string fone = textBoxTelefoneCliente.Text;
-            string nomeConsultora = textBoxNomeConsultoraCliente.Text;
-            string sexo = "";
-            if (radioButtonSexoFemininoCliente.Checked)
-                sexo = "Feminino";
-            else
-                sexo = "Masculino";
-
-            adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
-            limpaCampoCadastroCliente();
-            labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
-            
-        }
-
         private void buttonLimpaCamposCliente_Click(object sender, EventArgs e)
         {
             limpaCampoCadastroCliente();
@@ -96,6 +76,7 @@ namespace CadastroCliente
                                   Email = t.Email,
                                   Telefone = t.Telefone,
                                   Endereco = t.Endereco,
+                                  DataNascimento = t.DataNascimento,
                                   Consultora = t.NomeConsultora
                               };
                 dataGridViewClientes.DataSource = columns.ToList();
@@ -131,25 +112,7 @@ namespace CadastroCliente
             limpaCampoCadastroCliente();
         }
 
-        private void buttonAdicionaCliente_Click_1(object sender, EventArgs e)
-        {
-            string nome = textBoxNomeCliente.Text;
-            string endereco = textBoxEnderecoCliente.Text;
-            string dataNascimento = dataNascimentoCliente.Text;
-            string email = textBoxEmailCliente.Text;
-            string nomeConsultora = textBoxNomeConsultoraCliente.Text;
-            string fone = textBoxTelefoneCliente.Text;
-            string sexo = "";
-            if (radioButtonSexoFemininoCliente.Checked)
-                sexo = "Feminino";
-            else
-                sexo = "Masculino";
-
-            adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
-            limpaCampoCadastroCliente();
-            labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
-            
-        }
+        
 
         private void buttonLimpaCamposCliente_Click_2(object sender, EventArgs e)
         {
@@ -169,7 +132,7 @@ namespace CadastroCliente
                 sexo = "Feminino";
             else
                 sexo = "Masculino";
-            
+
             adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
@@ -206,23 +169,6 @@ namespace CadastroCliente
 
         }
 
-        private void dataGridViewClientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            labelLinhasSelecionadas.Visible = true;
-            Int32 linhasSelecionadas = dataGridViewClientes.Rows.GetRowCount(DataGridViewElementStates.Selected);
-            if(linhasSelecionadas > 0)
-            {
-                StringBuilder sb = new StringBuilder();
-                for (int i = 0; i < linhasSelecionadas; i++)
-                {
-                    sb.Append("Linha: ");
-                    sb.Append(dataGridViewClientes.SelectedRows[i].Index.ToString());
-                    sb.Append(Environment.NewLine);
-                }
-                sb.Append(labelLinhasSelecionadas.Text + ":" + linhasSelecionadas.ToString());
-            }
-        }
-
         private void dataGridViewClientes_Click(object sender, EventArgs e)
         {
             
@@ -230,7 +176,17 @@ namespace CadastroCliente
             if (dataGridViewClientes.SelectedRows.Count > 0)
             {
                 labelLinhasSelecionadas.Visible = true;
+                buttonRemoverCliente.Visible = true;
+                buttonAtualizarDados.Visible = true;
                 labelLinhasSelecionadas.Text = "Linhas selecionadas: " + dataGridViewClientes.SelectedRows.Count;
+                //Linha atual selecionada
+                textBoxNomeCliente.Text = dataGridViewClientes.CurrentRow.Cells[0].Value.ToString();
+                textBoxEmailCliente.Text = dataGridViewClientes.CurrentRow.Cells[1].Value.ToString();
+                textBoxTelefoneCliente.Text = dataGridViewClientes.CurrentRow.Cells[2].Value.ToString();
+                textBoxEnderecoCliente.Text = dataGridViewClientes.CurrentRow.Cells[3].Value.ToString();
+                dataNascimentoCliente.Text = dataGridViewClientes.CurrentRow.Cells[4].Value.ToString();
+                textBoxNomeConsultoraCliente.Text = dataGridViewClientes.CurrentRow.Cells[5].Value.ToString();
+                
             }
         }
     }

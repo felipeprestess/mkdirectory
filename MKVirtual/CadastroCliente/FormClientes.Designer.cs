@@ -35,6 +35,7 @@
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.labelTotalClientes = new System.Windows.Forms.Label();
             this.groupBoxNovoCliente = new System.Windows.Forms.GroupBox();
+            this.dataNascimentoCliente = new System.Windows.Forms.DateTimePicker();
             this.textBoxEnderecoCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.textBoxNomeConsultoraCliente = new System.Windows.Forms.TextBox();
@@ -55,7 +56,6 @@
             this.buttonNovoCliente = new System.Windows.Forms.Button();
             this.buttonRemoverCliente = new System.Windows.Forms.Button();
             this.buttonAtualizarDados = new System.Windows.Forms.Button();
-            this.dataNascimentoCliente = new System.Windows.Forms.DateTimePicker();
             this.labelLinhasSelecionadas = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
@@ -107,7 +107,6 @@
             this.dataGridViewClientes.Size = new System.Drawing.Size(338, 188);
             this.dataGridViewClientes.TabIndex = 0;
             this.dataGridViewClientes.Visible = false;
-            this.dataGridViewClientes.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridViewClientes_CellContentClick);
             this.dataGridViewClientes.Click += new System.EventHandler(this.dataGridViewClientes_Click);
             // 
             // labelTotalClientes
@@ -145,6 +144,13 @@
             this.groupBoxNovoCliente.TabStop = false;
             this.groupBoxNovoCliente.Text = "Detalhes do Cliente";
             this.groupBoxNovoCliente.Visible = false;
+            // 
+            // dataNascimentoCliente
+            // 
+            this.dataNascimentoCliente.Location = new System.Drawing.Point(132, 80);
+            this.dataNascimentoCliente.Name = "dataNascimentoCliente";
+            this.dataNascimentoCliente.Size = new System.Drawing.Size(146, 20);
+            this.dataNascimentoCliente.TabIndex = 45;
             // 
             // textBoxEnderecoCliente
             // 
@@ -317,6 +323,7 @@
             this.buttonRemoverCliente.TabIndex = 30;
             this.buttonRemoverCliente.Text = "Remover Cliente";
             this.buttonRemoverCliente.UseVisualStyleBackColor = true;
+            this.buttonRemoverCliente.Visible = false;
             this.buttonRemoverCliente.Click += new System.EventHandler(this.buttonRemoverCliente_Click);
             // 
             // buttonAtualizarDados
@@ -327,13 +334,7 @@
             this.buttonAtualizarDados.TabIndex = 31;
             this.buttonAtualizarDados.Text = "Atualizar Dados";
             this.buttonAtualizarDados.UseVisualStyleBackColor = true;
-            // 
-            // dataNascimentoCliente
-            // 
-            this.dataNascimentoCliente.Location = new System.Drawing.Point(132, 80);
-            this.dataNascimentoCliente.Name = "dataNascimentoCliente";
-            this.dataNascimentoCliente.Size = new System.Drawing.Size(146, 20);
-            this.dataNascimentoCliente.TabIndex = 45;
+            this.buttonAtualizarDados.Visible = false;
             // 
             // labelLinhasSelecionadas
             // 
