@@ -39,6 +39,7 @@ namespace CadastroCliente
             adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
+            
         }
 
         private void buttonLimpaCamposCliente_Click(object sender, EventArgs e)
@@ -147,6 +148,7 @@ namespace CadastroCliente
             adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
+            
         }
 
         private void buttonLimpaCamposCliente_Click_2(object sender, EventArgs e)
@@ -167,10 +169,11 @@ namespace CadastroCliente
                 sexo = "Feminino";
             else
                 sexo = "Masculino";
-
+            
             adm.registrarCliente(nome, endereco, dataNascimento, email, fone, sexo, nomeConsultora);
             limpaCampoCadastroCliente();
             labelTotalClientes.Text = "Total clientes: " + adm.listaClientes.Count;
+            
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -222,6 +225,8 @@ namespace CadastroCliente
 
         private void dataGridViewClientes_Click(object sender, EventArgs e)
         {
+            
+
             if (dataGridViewClientes.SelectedRows.Count > 0)
             {
                 labelLinhasSelecionadas.Visible = true;
