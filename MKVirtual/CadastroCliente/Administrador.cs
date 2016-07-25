@@ -55,13 +55,15 @@ namespace CadastroCliente
             person.Id = proximoIdDisponivel;
             listaClientes.Add(person);
 
-            proximoIdDisponivel++;
+            proximoIdDisponivel++;//Id do cliente
             MessageBox.Show("Cliente adicionado com sucesso!", "Cadastro Cliente");
         }
         /*Método de excluir cliente*/
         public void removeCliente(Cliente cliente)
         {
-            listaClientes.Remove(cliente);
+            Cliente remover = listaClientes.Where(t => t.Id == cliente.Id).FirstOrDefault();
+            listaClientes.Remove(remover);
+
             MessageBox.Show("Cliente removido!");
         }
         /*Método de editar cliente*/

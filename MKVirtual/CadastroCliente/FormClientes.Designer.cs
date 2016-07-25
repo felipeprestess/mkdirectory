@@ -35,6 +35,9 @@
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
             this.labelTotalClientes = new System.Windows.Forms.Label();
             this.groupBoxNovoCliente = new System.Windows.Forms.GroupBox();
+            this.txtIDCliente = new System.Windows.Forms.TextBox();
+            this.lblIDCliente = new System.Windows.Forms.Label();
+            this.lbID = new System.Windows.Forms.Label();
             this.buttonSalvarAlteracao = new System.Windows.Forms.Button();
             this.dataNascimentoCliente = new System.Windows.Forms.DateTimePicker();
             this.textBoxEnderecoCliente = new System.Windows.Forms.TextBox();
@@ -53,12 +56,9 @@
             this.labelEmailCadastroCliente = new System.Windows.Forms.Label();
             this.labelIdadeCadastroCliente = new System.Windows.Forms.Label();
             this.labelNomeCadastroCliente = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
             this.buttonNovoCliente = new System.Windows.Forms.Button();
             this.buttonRemoverCliente = new System.Windows.Forms.Button();
-            this.buttonAtualizarDados = new System.Windows.Forms.Button();
             this.labelLinhasSelecionadas = new System.Windows.Forms.Label();
-            this.txtId = new System.Windows.Forms.TextBox();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
             this.groupBoxNovoCliente.SuspendLayout();
@@ -76,17 +76,17 @@
             // 
             // textBoxPesquisaNomeCliente
             // 
-            this.textBoxPesquisaNomeCliente.Location = new System.Drawing.Point(38, 14);
+            this.textBoxPesquisaNomeCliente.Location = new System.Drawing.Point(27, 17);
             this.textBoxPesquisaNomeCliente.Name = "textBoxPesquisaNomeCliente";
             this.textBoxPesquisaNomeCliente.Size = new System.Drawing.Size(100, 20);
-            this.textBoxPesquisaNomeCliente.TabIndex = 15;
+            this.textBoxPesquisaNomeCliente.TabIndex = 34;
             this.textBoxPesquisaNomeCliente.TextChanged += new System.EventHandler(this.textBoxPesquisaNomeCliente_TextChanged);
             // 
             // buttonPesquisarCliente
             // 
-            this.buttonPesquisarCliente.Location = new System.Drawing.Point(144, 14);
+            this.buttonPesquisarCliente.Location = new System.Drawing.Point(147, 17);
             this.buttonPesquisarCliente.Name = "buttonPesquisarCliente";
-            this.buttonPesquisarCliente.Size = new System.Drawing.Size(75, 23);
+            this.buttonPesquisarCliente.Size = new System.Drawing.Size(75, 20);
             this.buttonPesquisarCliente.TabIndex = 16;
             this.buttonPesquisarCliente.Text = "Pesquisar";
             this.buttonPesquisarCliente.UseVisualStyleBackColor = true;
@@ -122,7 +122,9 @@
             // 
             // groupBoxNovoCliente
             // 
-            this.groupBoxNovoCliente.Controls.Add(this.txtId);
+            this.groupBoxNovoCliente.Controls.Add(this.txtIDCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.lblIDCliente);
+            this.groupBoxNovoCliente.Controls.Add(this.lbID);
             this.groupBoxNovoCliente.Controls.Add(this.buttonSalvarAlteracao);
             this.groupBoxNovoCliente.Controls.Add(this.dataNascimentoCliente);
             this.groupBoxNovoCliente.Controls.Add(this.textBoxEnderecoCliente);
@@ -149,9 +151,34 @@
             this.groupBoxNovoCliente.Text = "Detalhes do Cliente";
             this.groupBoxNovoCliente.Visible = false;
             // 
+            // txtIDCliente
+            // 
+            this.txtIDCliente.Enabled = false;
+            this.txtIDCliente.Location = new System.Drawing.Point(52, 18);
+            this.txtIDCliente.Name = "txtIDCliente";
+            this.txtIDCliente.Size = new System.Drawing.Size(28, 20);
+            this.txtIDCliente.TabIndex = 49;
+            // 
+            // lblIDCliente
+            // 
+            this.lblIDCliente.AutoSize = true;
+            this.lblIDCliente.Location = new System.Drawing.Point(29, 22);
+            this.lblIDCliente.Name = "lblIDCliente";
+            this.lblIDCliente.Size = new System.Drawing.Size(18, 13);
+            this.lblIDCliente.TabIndex = 48;
+            this.lblIDCliente.Text = "ID";
+            // 
+            // lbID
+            // 
+            this.lbID.AutoSize = true;
+            this.lbID.Location = new System.Drawing.Point(29, 18);
+            this.lbID.Name = "lbID";
+            this.lbID.Size = new System.Drawing.Size(0, 13);
+            this.lbID.TabIndex = 47;
+            // 
             // buttonSalvarAlteracao
             // 
-            this.buttonSalvarAlteracao.Location = new System.Drawing.Point(39, 223);
+            this.buttonSalvarAlteracao.Location = new System.Drawing.Point(39, 232);
             this.buttonSalvarAlteracao.Name = "buttonSalvarAlteracao";
             this.buttonSalvarAlteracao.Size = new System.Drawing.Size(81, 23);
             this.buttonSalvarAlteracao.TabIndex = 46;
@@ -162,14 +189,14 @@
             // 
             // dataNascimentoCliente
             // 
-            this.dataNascimentoCliente.Location = new System.Drawing.Point(132, 80);
+            this.dataNascimentoCliente.Location = new System.Drawing.Point(132, 89);
             this.dataNascimentoCliente.Name = "dataNascimentoCliente";
             this.dataNascimentoCliente.Size = new System.Drawing.Size(146, 20);
             this.dataNascimentoCliente.TabIndex = 45;
             // 
             // textBoxEnderecoCliente
             // 
-            this.textBoxEnderecoCliente.Location = new System.Drawing.Point(131, 55);
+            this.textBoxEnderecoCliente.Location = new System.Drawing.Point(131, 64);
             this.textBoxEnderecoCliente.Name = "textBoxEnderecoCliente";
             this.textBoxEnderecoCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxEnderecoCliente.TabIndex = 44;
@@ -177,7 +204,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(29, 62);
+            this.label2.Location = new System.Drawing.Point(28, 71);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 13);
             this.label2.TabIndex = 43;
@@ -185,7 +212,7 @@
             // 
             // textBoxNomeConsultoraCliente
             // 
-            this.textBoxNomeConsultoraCliente.Location = new System.Drawing.Point(132, 186);
+            this.textBoxNomeConsultoraCliente.Location = new System.Drawing.Point(132, 195);
             this.textBoxNomeConsultoraCliente.Name = "textBoxNomeConsultoraCliente";
             this.textBoxNomeConsultoraCliente.Size = new System.Drawing.Size(107, 20);
             this.textBoxNomeConsultoraCliente.TabIndex = 42;
@@ -193,7 +220,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(28, 191);
+            this.label1.Location = new System.Drawing.Point(28, 200);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 41;
@@ -202,7 +229,7 @@
             // textBoxTelefoneCliente
             // 
             this.textBoxTelefoneCliente.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            this.textBoxTelefoneCliente.Location = new System.Drawing.Point(131, 134);
+            this.textBoxTelefoneCliente.Location = new System.Drawing.Point(131, 143);
             this.textBoxTelefoneCliente.Mask = "(999) 0000-0000";
             this.textBoxTelefoneCliente.Name = "textBoxTelefoneCliente";
             this.textBoxTelefoneCliente.Size = new System.Drawing.Size(100, 20);
@@ -211,7 +238,7 @@
             // radioButtonSexoMasculinoCliente
             // 
             this.radioButtonSexoMasculinoCliente.AutoSize = true;
-            this.radioButtonSexoMasculinoCliente.Location = new System.Drawing.Point(205, 163);
+            this.radioButtonSexoMasculinoCliente.Location = new System.Drawing.Point(205, 172);
             this.radioButtonSexoMasculinoCliente.Name = "radioButtonSexoMasculinoCliente";
             this.radioButtonSexoMasculinoCliente.Size = new System.Drawing.Size(73, 17);
             this.radioButtonSexoMasculinoCliente.TabIndex = 39;
@@ -223,7 +250,7 @@
             // radioButtonSexoFemininoCliente
             // 
             this.radioButtonSexoFemininoCliente.AutoSize = true;
-            this.radioButtonSexoFemininoCliente.Location = new System.Drawing.Point(132, 163);
+            this.radioButtonSexoFemininoCliente.Location = new System.Drawing.Point(132, 172);
             this.radioButtonSexoFemininoCliente.Name = "radioButtonSexoFemininoCliente";
             this.radioButtonSexoFemininoCliente.Size = new System.Drawing.Size(67, 17);
             this.radioButtonSexoFemininoCliente.TabIndex = 38;
@@ -234,7 +261,7 @@
             // labelSexoCadastroCliente
             // 
             this.labelSexoCadastroCliente.AutoSize = true;
-            this.labelSexoCadastroCliente.Location = new System.Drawing.Point(28, 165);
+            this.labelSexoCadastroCliente.Location = new System.Drawing.Point(28, 174);
             this.labelSexoCadastroCliente.Name = "labelSexoCadastroCliente";
             this.labelSexoCadastroCliente.Size = new System.Drawing.Size(31, 13);
             this.labelSexoCadastroCliente.TabIndex = 37;
@@ -243,7 +270,7 @@
             // labelTelefoneCadastroCliente
             // 
             this.labelTelefoneCadastroCliente.AutoSize = true;
-            this.labelTelefoneCadastroCliente.Location = new System.Drawing.Point(28, 141);
+            this.labelTelefoneCadastroCliente.Location = new System.Drawing.Point(28, 150);
             this.labelTelefoneCadastroCliente.Name = "labelTelefoneCadastroCliente";
             this.labelTelefoneCadastroCliente.Size = new System.Drawing.Size(49, 13);
             this.labelTelefoneCadastroCliente.TabIndex = 35;
@@ -251,7 +278,7 @@
             // 
             // buttonLimpaCamposCliente
             // 
-            this.buttonLimpaCamposCliente.Location = new System.Drawing.Point(153, 223);
+            this.buttonLimpaCamposCliente.Location = new System.Drawing.Point(153, 232);
             this.buttonLimpaCamposCliente.Name = "buttonLimpaCamposCliente";
             this.buttonLimpaCamposCliente.Size = new System.Drawing.Size(75, 23);
             this.buttonLimpaCamposCliente.TabIndex = 33;
@@ -261,7 +288,7 @@
             // 
             // buttonAdicionaCliente
             // 
-            this.buttonAdicionaCliente.Location = new System.Drawing.Point(39, 223);
+            this.buttonAdicionaCliente.Location = new System.Drawing.Point(39, 232);
             this.buttonAdicionaCliente.Name = "buttonAdicionaCliente";
             this.buttonAdicionaCliente.Size = new System.Drawing.Size(81, 23);
             this.buttonAdicionaCliente.TabIndex = 32;
@@ -271,14 +298,14 @@
             // 
             // textBoxEmailCliente
             // 
-            this.textBoxEmailCliente.Location = new System.Drawing.Point(131, 107);
+            this.textBoxEmailCliente.Location = new System.Drawing.Point(131, 116);
             this.textBoxEmailCliente.Name = "textBoxEmailCliente";
             this.textBoxEmailCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxEmailCliente.TabIndex = 31;
             // 
             // textBoxNomeCliente
             // 
-            this.textBoxNomeCliente.Location = new System.Drawing.Point(131, 28);
+            this.textBoxNomeCliente.Location = new System.Drawing.Point(131, 38);
             this.textBoxNomeCliente.Name = "textBoxNomeCliente";
             this.textBoxNomeCliente.Size = new System.Drawing.Size(141, 20);
             this.textBoxNomeCliente.TabIndex = 30;
@@ -286,7 +313,7 @@
             // labelEmailCadastroCliente
             // 
             this.labelEmailCadastroCliente.AutoSize = true;
-            this.labelEmailCadastroCliente.Location = new System.Drawing.Point(28, 114);
+            this.labelEmailCadastroCliente.Location = new System.Drawing.Point(28, 123);
             this.labelEmailCadastroCliente.Name = "labelEmailCadastroCliente";
             this.labelEmailCadastroCliente.Size = new System.Drawing.Size(32, 13);
             this.labelEmailCadastroCliente.TabIndex = 29;
@@ -295,7 +322,7 @@
             // labelIdadeCadastroCliente
             // 
             this.labelIdadeCadastroCliente.AutoSize = true;
-            this.labelIdadeCadastroCliente.Location = new System.Drawing.Point(28, 88);
+            this.labelIdadeCadastroCliente.Location = new System.Drawing.Point(28, 95);
             this.labelIdadeCadastroCliente.Name = "labelIdadeCadastroCliente";
             this.labelIdadeCadastroCliente.Size = new System.Drawing.Size(104, 13);
             this.labelIdadeCadastroCliente.TabIndex = 28;
@@ -304,21 +331,11 @@
             // labelNomeCadastroCliente
             // 
             this.labelNomeCadastroCliente.AutoSize = true;
-            this.labelNomeCadastroCliente.Location = new System.Drawing.Point(28, 35);
+            this.labelNomeCadastroCliente.Location = new System.Drawing.Point(28, 44);
             this.labelNomeCadastroCliente.Name = "labelNomeCadastroCliente";
             this.labelNomeCadastroCliente.Size = new System.Drawing.Size(35, 13);
             this.labelNomeCadastroCliente.TabIndex = 27;
             this.labelNomeCadastroCliente.Text = "Nome";
-            // 
-            // button1
-            // 
-            this.button1.Location = new System.Drawing.Point(241, 14);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
-            this.button1.TabIndex = 28;
-            this.button1.Text = "Emails";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // buttonNovoCliente
             // 
@@ -341,16 +358,6 @@
             this.buttonRemoverCliente.Visible = false;
             this.buttonRemoverCliente.Click += new System.EventHandler(this.buttonRemoverCliente_Click);
             // 
-            // buttonAtualizarDados
-            // 
-            this.buttonAtualizarDados.Location = new System.Drawing.Point(232, 297);
-            this.buttonAtualizarDados.Name = "buttonAtualizarDados";
-            this.buttonAtualizarDados.Size = new System.Drawing.Size(89, 23);
-            this.buttonAtualizarDados.TabIndex = 31;
-            this.buttonAtualizarDados.Text = "Atualizar Dados";
-            this.buttonAtualizarDados.UseVisualStyleBackColor = true;
-            this.buttonAtualizarDados.Visible = false;
-            // 
             // labelLinhasSelecionadas
             // 
             this.labelLinhasSelecionadas.AutoSize = true;
@@ -361,13 +368,6 @@
             this.labelLinhasSelecionadas.Text = "Linhas Selecionadas: 0";
             this.labelLinhasSelecionadas.Visible = false;
             // 
-            // txtId
-            // 
-            this.txtId.Location = new System.Drawing.Point(31, 12);
-            this.txtId.Name = "txtId";
-            this.txtId.Size = new System.Drawing.Size(100, 20);
-            this.txtId.TabIndex = 47;
-            // 
             // FormClientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -375,10 +375,8 @@
             this.AutoScroll = true;
             this.ClientSize = new System.Drawing.Size(754, 371);
             this.Controls.Add(this.labelLinhasSelecionadas);
-            this.Controls.Add(this.buttonAtualizarDados);
             this.Controls.Add(this.buttonRemoverCliente);
             this.Controls.Add(this.buttonNovoCliente);
-            this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBoxNovoCliente);
             this.Controls.Add(this.labelTotalClientes);
             this.Controls.Add(this.panel1);
@@ -418,17 +416,17 @@
         private System.Windows.Forms.Label labelIdadeCadastroCliente;
         private System.Windows.Forms.Label labelNomeCadastroCliente;
         private System.Windows.Forms.MaskedTextBox textBoxTelefoneCliente;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBoxNomeConsultoraCliente;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox textBoxEnderecoCliente;
         private System.Windows.Forms.Button buttonNovoCliente;
         private System.Windows.Forms.Button buttonRemoverCliente;
-        private System.Windows.Forms.Button buttonAtualizarDados;
         private System.Windows.Forms.DateTimePicker dataNascimentoCliente;
         private System.Windows.Forms.Label labelLinhasSelecionadas;
         private System.Windows.Forms.Button buttonSalvarAlteracao;
-        private System.Windows.Forms.TextBox txtId;
+        private System.Windows.Forms.Label lbID;
+        private System.Windows.Forms.Label lblIDCliente;
+        private System.Windows.Forms.TextBox txtIDCliente;
     }
 }
