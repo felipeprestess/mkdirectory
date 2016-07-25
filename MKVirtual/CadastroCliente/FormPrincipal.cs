@@ -119,5 +119,17 @@ namespace CadastroCliente
             FormProduto formProduto = new FormProduto();
             formProduto.Show();
         }
+
+        private void btnCompras_Click(object sender, EventArgs e)
+        {
+            FormCompra formCompra = new FormCompra();
+            formCompra.Show();
+        }
+
+        private void novaCompraToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormCompra formCompra = new FormCompra();
+            formCompra.Show();
+        }
     }
 }

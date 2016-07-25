@@ -59,3 +59,4 @@ C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Deb
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormCliente.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormProduto.resources
 C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormVenda.resources
+C:\Users\Felipe.Costa\Source\Repos\mkdirectory\MKVirtual\CadastroCliente\obj\Debug\CadastroCliente.FormCompra.resources

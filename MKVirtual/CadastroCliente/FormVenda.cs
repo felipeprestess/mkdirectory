@@ -21,5 +21,10 @@ namespace CadastroCliente
             FormNovaVenda formNovaVenda = new FormNovaVenda();
             formNovaVenda.Show();
         }
+
+        private void dataGridVendas_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

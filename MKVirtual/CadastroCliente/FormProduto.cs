@@ -125,6 +125,8 @@ namespace CadastroCliente
             limpaCampos();
             btnSalvarProduto.Visible = false;
             btnRegistraProduto.Visible = true;
+            btnRemoverProduto.Visible = false;
+            lblLinhasSelecionadas.Visible = false;
             populaGrid();
         }
 
@@ -140,7 +142,9 @@ namespace CadastroCliente
             limpaCampos();
             populaGrid();
             btnSalvarProduto.Visible = false;
+            btnRegistraProduto.Visible = true;
             lblTotalProdutos.Text = "Total: " + adm.ListaProdutos.Count();
+            lblLinhasSelecionadas.Visible = false;
 
         }
     }
