@@ -36,10 +36,10 @@ namespace CadastroCliente
             //    }
                     
             //}
-            if (loginTemp == "adm" && passTemp == "adm")
+            if (loginUsuario == loginTemp && passUsuario == passTemp)
                     formPrincipal.Show();
             else
-                MessageBox.Show("Usuario nao encontrado!");
+                MessageBox.Show("Usuario nao encontrado!","Alerta");
         }
 
         private void cbxOpcaoLogin_SelectedIndexChanged(object sender, EventArgs e)
