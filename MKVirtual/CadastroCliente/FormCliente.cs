@@ -9,12 +9,12 @@ using System.Windows.Forms;
 
 namespace CadastroCliente
 {
-    public partial class FormClientes : Form
+    public partial class FormCliente : Form
     {
         Administrador adm;
                 
 
-        public FormClientes()
+        public FormCliente()
         {
             InitializeComponent();
             adm = new Administrador();
@@ -28,15 +28,15 @@ namespace CadastroCliente
 
         private void limpaCampoCadastroCliente()
         {
-            textBoxNomeCliente.Clear();
-            textBoxEnderecoCliente.Clear();
+            txtNomeCliente.Clear();
+            txtEnderecoCliente.Clear();
             dataNascimentoCliente.ResetText();
-            textBoxEmailCliente.Clear();
-            textBoxTelefoneCliente.Clear();
-            textBoxNomeConsultoraCliente.Clear();
-            radioButtonSexoFemininoCliente.Checked = false;
-            radioButtonSexoMasculinoCliente.Checked = false;
-            textBoxPesquisaNomeCliente.Clear();
+            txtEmailCliente.Clear();
+            mskTelefoneCliente.Clear();
+            txtNomeConsultoraCliente.Clear();
+            rdbtnSexoFemininoCliente.Checked = false;
+            rdbtnSexoMasculinoCliente.Checked = false;
+            txtPesquisaNomeCliente.Clear();
             txtIDCliente.Clear();
         }
 
@@ -53,7 +53,7 @@ namespace CadastroCliente
             dataGridViewClientes.DataSource = adm.listarTodosClientes();
             if (adm.ListaClientes.Any())
             {
-                var columns = from t in adm.ListaClientes
+                var dataTable = from t in adm.ListaClientes
                               orderby t.Id
                               select new
                               {
@@ -66,7 +66,7 @@ namespace CadastroCliente
                                   Sexo = t.Sexo,
                                   Consultora = t.NomeConsultora
                               };
-                dataGridViewClientes.DataSource = columns.ToList();
+                dataGridViewClientes.DataSource = dataTable.ToList();
                 dataGridViewClientes.Visible = true;
                 dataGridViewClientes.Show();
             }
@@ -74,8 +74,8 @@ namespace CadastroCliente
 
         private void buttonPesquisarCliente_Click(object sender, EventArgs e)
         {
-            string nomePesquisado = textBoxPesquisaNomeCliente.Text;
-            if (String.IsNullOrEmpty(textBoxPesquisaNomeCliente.Text))
+            string nomePesquisado = txtPesquisaNomeCliente.Text;
+            if (String.IsNullOrEmpty(txtPesquisaNomeCliente.Text))
                 MessageBox.Show("Insira um nome!", "Ops...");
             adm.pesquisarCliente(nomePesquisado);
             limpaCampoCadastroCliente();
@@ -100,14 +100,14 @@ namespace CadastroCliente
 
         private void buttonAdicionaCliente_Click_2(object sender, EventArgs e)
         {
-            string nome = textBoxNomeCliente.Text;
-            string endereco = textBoxEnderecoCliente.Text;
+            string nome = txtNomeCliente.Text;
+            string endereco = txtEnderecoCliente.Text;
             string dataNascimento = dataNascimentoCliente.Text;
-            string email = textBoxEmailCliente.Text;
-            string fone = textBoxTelefoneCliente.Text;
-            string nomeConsultora = textBoxNomeConsultoraCliente.Text;
+            string email = txtEmailCliente.Text;
+            string fone = mskTelefoneCliente.Text;
+            string nomeConsultora = txtNomeConsultoraCliente.Text;
             string sexo = "";
-            if (radioButtonSexoFemininoCliente.Checked)
+            if (rdbtnSexoFemininoCliente.Checked)
                 sexo = "Feminino";
             else
                 sexo = "Masculino";
@@ -125,7 +125,7 @@ namespace CadastroCliente
 
         private void buttonNovoCliente_Click(object sender, EventArgs e)
         {
-            groupBoxNovoCliente.Visible = true;
+            gpxCliente.Enabled = true;
         }
 
   
@@ -133,18 +133,18 @@ namespace CadastroCliente
         {
             var cliente = new Cliente();
             cliente.Id = int.Parse(txtIDCliente.Text);
-            cliente.Nome = textBoxNomeCliente.Text; ;
-            cliente.Email = textBoxEmailCliente.Text;
-            cliente.Telefone = textBoxTelefoneCliente.Text;
-            cliente.Endereco = textBoxEnderecoCliente.Text;
+            cliente.Nome = txtNomeCliente.Text; ;
+            cliente.Email = txtEmailCliente.Text;
+            cliente.Telefone = mskTelefoneCliente.Text;
+            cliente.Endereco = txtEnderecoCliente.Text;
             cliente.DataNascimento = dataNascimentoCliente.Text;
-            cliente.NomeConsultora = textBoxNomeConsultoraCliente.Text;
+            cliente.NomeConsultora = txtNomeConsultoraCliente.Text;
             
             adm.removeCliente(cliente);
             limpaCampoCadastroCliente();
             populaGrid();
-            buttonAdicionaCliente.Visible = true;
-            buttonSalvarAlteracao.Visible = false;
+            btnAdicionaCliente.Visible = true;
+            btnSalvarAlteracao.Visible = false;
             labelTotalClientes.Text = "Total clientes: " + adm.ListaClientes.Count();
             
             
@@ -155,18 +155,18 @@ namespace CadastroCliente
             if (dataGridViewClientes.SelectedRows.Count > 0)
             {
                 labelLinhasSelecionadas.Visible = true;
-                buttonRemoverCliente.Visible = true;
+                btnRemoverCliente.Visible = true;
                 labelLinhasSelecionadas.Text = "Linhas selecionadas: " + dataGridViewClientes.SelectedRows.Count;
                 //Linha atual selecionada do DataGridView
                 txtIDCliente.Text = dataGridViewClientes.CurrentRow.Cells[0].Value.ToString();
-                textBoxNomeCliente.Text = dataGridViewClientes.CurrentRow.Cells[1].Value.ToString();
-                textBoxEmailCliente.Text = dataGridViewClientes.CurrentRow.Cells[2].Value.ToString();
-                textBoxTelefoneCliente.Text = dataGridViewClientes.CurrentRow.Cells[3].Value.ToString();
-                textBoxEnderecoCliente.Text = dataGridViewClientes.CurrentRow.Cells[4].Value.ToString();
+                txtNomeCliente.Text = dataGridViewClientes.CurrentRow.Cells[1].Value.ToString();
+                txtEmailCliente.Text = dataGridViewClientes.CurrentRow.Cells[2].Value.ToString();
+                mskTelefoneCliente.Text = dataGridViewClientes.CurrentRow.Cells[3].Value.ToString();
+                txtEnderecoCliente.Text = dataGridViewClientes.CurrentRow.Cells[4].Value.ToString();
                 dataNascimentoCliente.Text = dataGridViewClientes.CurrentRow.Cells[5].Value.ToString();
-                textBoxNomeConsultoraCliente.Text = dataGridViewClientes.CurrentRow.Cells[6].Value.ToString();
-                buttonAdicionaCliente.Visible = false;
-                buttonSalvarAlteracao.Visible = true;
+                txtNomeConsultoraCliente.Text = dataGridViewClientes.CurrentRow.Cells[6].Value.ToString();
+                btnAdicionaCliente.Visible = false;
+                btnSalvarAlteracao.Visible = true;
 
             }
         }
@@ -175,17 +175,17 @@ namespace CadastroCliente
         {
             var cliente = new Cliente();
             cliente.Id = int.Parse(txtIDCliente.Text);
-            cliente.Nome = textBoxNomeCliente.Text;;
-            cliente.Email = textBoxEmailCliente.Text;
-            cliente.Telefone = textBoxTelefoneCliente.Text;
-            cliente.Endereco = textBoxEnderecoCliente.Text;
+            cliente.Nome = txtNomeCliente.Text;;
+            cliente.Email = txtEmailCliente.Text;
+            cliente.Telefone = mskTelefoneCliente.Text;
+            cliente.Endereco = txtEnderecoCliente.Text;
             cliente.DataNascimento = dataNascimentoCliente.Text;
-            cliente.NomeConsultora = textBoxNomeConsultoraCliente.Text;
+            cliente.NomeConsultora = txtNomeConsultoraCliente.Text;
 
             adm.editarCliente(cliente);
             populaGrid();
-            buttonSalvarAlteracao.Visible = false;
-            buttonAdicionaCliente.Visible = true;
+            btnSalvarAlteracao.Visible = false;
+            btnAdicionaCliente.Visible = true;
             limpaCampoCadastroCliente();
         }
 

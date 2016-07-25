@@ -27,13 +27,13 @@ namespace CadastroCliente
 
         private void button1_Click(object sender, EventArgs e)
         {
-            FormClientes form = new FormClientes();
+            FormCliente form = new FormCliente();
             form.Show();
         }
 
         private void buttonProdutos_Click(object sender, EventArgs e)
         {
-            FormProdutos form = new FormProdutos();
+            FormProduto form = new FormProduto();
             form.Show();
         }
 
@@ -45,13 +45,13 @@ namespace CadastroCliente
 
         private void subMenuCriarNovoCliente_Click(object sender, EventArgs e)
         {
-            FormClientes formClientes = new FormClientes();
+            FormCliente formClientes = new FormCliente();
             formClientes.Show();
         }
 
         private void subMenuCriarNovoProduto_Click(object sender, EventArgs e)
         {
-            FormProdutos formProduto = new FormProdutos();
+            FormProduto formProduto = new FormProduto();
             formProduto.Show();
         }
 
@@ -69,7 +69,7 @@ namespace CadastroCliente
 
         private void buttonPrincipalVendas_Click_1(object sender, EventArgs e)
         {
-            FormVendas formVendas = new FormVendas();
+            FormVenda formVendas = new FormVenda();
             formVendas.Show();
         }
 
@@ -80,13 +80,13 @@ namespace CadastroCliente
 
         private void produtosToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormProdutos formProdutos = new FormProdutos();
+            FormProduto formProdutos = new FormProduto();
             formProdutos.Show();
         }
 
         private void buttonPrincipalParceiras_Click(object sender, EventArgs e)
         {
-            FormParceiras formParceiras = new FormParceiras();
+            FormParceira formParceiras = new FormParceira();
             formParceiras.Show();
         }
 
@@ -98,7 +98,7 @@ namespace CadastroCliente
 
         private void novoClienteToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            FormClientes formCliente = new FormClientes();
+            FormCliente formCliente = new FormCliente();
             formCliente.Show();
         }
 
@@ -112,6 +112,12 @@ namespace CadastroCliente
         {
             FormConfiguracao formConfiguracao = new FormConfiguracao();
             formConfiguracao.Show();
+        }
+
+        private void novoProdutoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            FormProduto formProduto = new FormProduto();
+            formProduto.Show();
         }
     }
 }

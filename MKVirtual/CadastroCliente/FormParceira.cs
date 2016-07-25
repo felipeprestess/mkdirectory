@@ -9,17 +9,19 @@ using System.Windows.Forms;
 
 namespace CadastroCliente
 {
-    public partial class FormVendas : Form
+    /*Este Formulário estará sendo utilizado para visualizar as parceiras, 
+     *como também no que estão mais vendendo 
+     * */
+    public partial class FormParceira : Form
     {
-        public FormVendas()
+        public FormParceira()
         {
             InitializeComponent();
         }
 
-        private void buttonNovaVendaVendas_Click(object sender, EventArgs e)
+        private void FormParceiras_Load(object sender, EventArgs e)
         {
-            FormNovaVenda formNovaVenda = new FormNovaVenda();
-            formNovaVenda.Show();
+
         }
     }
 }

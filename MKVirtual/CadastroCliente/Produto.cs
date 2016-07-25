@@ -8,6 +8,10 @@ namespace CadastroCliente
 {
     public class Produto
     {
+        public Produto() { }
+
+        public int Id { get; set; }
+
         private string nomeProduto;
         public string NomeProduto {
             get { return nomeProduto; }
@@ -29,7 +33,7 @@ namespace CadastroCliente
             set { linhaProduto = value; }
         }
 
-        public Produto(){}
+        
 
         
     }

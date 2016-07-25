@@ -13,6 +13,7 @@ namespace CadastroCliente
             : base(1)
         {
             listaClientes = new List<Cliente>();
+            listaProdutos = new List<Produto>();
             proximoIdDisponivel = 1;
         }
 
@@ -20,9 +21,10 @@ namespace CadastroCliente
 
         private List<Cliente> listaClientes;
         public IEnumerable<Cliente> ListaClientes { get { return listaClientes; } }
+        public List<Produto> listaProdutos;
+        public IEnumerable<Produto> ListaProdutos { get { return listaProdutos; } }
 
         public List<Parceira> listaParceiras = new List<Parceira>();
-        public List<Produto> listaProduto = new List<Produto>();
         public List<Usuario> listaUsuarios = new List<Usuario>();
         public AutoCompleteStringCollection listaNovaClientes = new AutoCompleteStringCollection();
 
@@ -93,8 +95,30 @@ namespace CadastroCliente
         public void registrarProduto(string nome, string tipo, decimal preco, string linha)
         {
             Produto prd = new Produto() { NomeProduto = nome, TipoProduto = tipo, PrecoProduto = preco, LinhaProduto = linha };
-            listaProduto.Add(prd);
+            prd.Id = proximoIdDisponivel;
+            listaProdutos.Add(prd);
+            proximoIdDisponivel++;
             MessageBox.Show("Registro realizado com sucesso!");
+        }
+
+        public void editarProduto(Produto produto)
+        {
+            Produto atualizar = listaProdutos.Where(t => t.Id == produto.Id).FirstOrDefault();
+
+            if (atualizar == null)
+                throw new Exception("Produto não encontrado.");
+
+            atualizar.NomeProduto = produto.NomeProduto;
+            atualizar.TipoProduto = produto.TipoProduto;
+            atualizar.PrecoProduto = produto.PrecoProduto;
+            atualizar.LinhaProduto = produto.LinhaProduto;
+        }
+
+        public void removerProduto(Produto produto)
+        {
+            Produto remover = listaProdutos.Where(t => t.Id == produto.Id).FirstOrDefault();
+            listaProdutos.Remove(remover);
+            MessageBox.Show("Produto removido!");
         }
     }
 }
