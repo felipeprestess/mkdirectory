@@ -74,6 +74,11 @@
     <Compile Include="Administrador.cs" />
     <Compile Include="Cliente.cs" />
     <Compile Include="Compra.cs" />
+    <Compile Include="FelipeCostaDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>FelipeCostaDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="FormAdm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -194,6 +199,17 @@
     </Compile>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="FelipeCostaDataSet.xsc">
+      <DependentUpon>FelipeCostaDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="FelipeCostaDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>FelipeCostaDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="FelipeCostaDataSet.xss">
+      <DependentUpon>FelipeCostaDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

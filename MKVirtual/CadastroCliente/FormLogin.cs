@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 
+
 namespace CadastroCliente
 {
     public partial class FormLogin : Form
@@ -36,8 +37,11 @@ namespace CadastroCliente
             //    }
                     
             //}
-            if (loginUsuario == loginTemp && passUsuario == passTemp)
-                    formPrincipal.Show();
+            if (loginUsuario == loginTemp && passUsuario == passTemp){
+                formPrincipal.Show();
+                Application.OpenForms.Count.ToString();
+            }
+                    
             else
                 MessageBox.Show("Usuario nao encontrado!","Alerta");
         }

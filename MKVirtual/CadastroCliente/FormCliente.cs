@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -50,25 +51,34 @@ namespace CadastroCliente
 
         private void populaGrid()
         {
-            dataGridViewClientes.DataSource = adm.listarTodosClientes();
-            if (adm.ListaClientes.Any())
+            
+            //dataGridViewClientes.DataSource = adm.listarTodosClientes();
+            //if (adm.ListaClientes.Any())
+            //{
+            //    var dataTable = from t in felipeCostaDataSet.Clientes
+            //                  orderby t.ClienteCodigo
+            //                  select new
+            //                  {
+            //                      Codigo = t.ClienteCodigo,
+            //                      Nome = t.ClienteNome,
+            //                      Email = t.ClienteEmail,
+            //                      Endereco = t.ClienteEndereco,
+            //                      DataNascimento = t.ClienteNascimento,
+            //                      Sexo = t.ClienteSexo,
+                                  
+            //                  };
+            //    dataGridViewClientes.DataSource = dataTable.ToList();
+            //    dataGridViewClientes.Visible = true;
+            //    dataGridViewClientes.Show();
+            //}
+
+
+
+
+            dataGridViewClientes.DataSource = felipeCostaDataSet.Clientes;
+            if (felipeCostaDataSet.Clientes.Any())
             {
-                var dataTable = from t in adm.ListaClientes
-                              orderby t.Id
-                              select new
-                              {
-                                  Id = t.Id,
-                                  Nome = t.Nome,
-                                  Email = t.Email,
-                                  Telefone = t.Telefone,
-                                  Endereco = t.Endereco,
-                                  DataNascimento = t.DataNascimento,
-                                  Sexo = t.Sexo,
-                                  Consultora = t.NomeConsultora
-                              };
-                dataGridViewClientes.DataSource = dataTable.ToList();
-                dataGridViewClientes.Visible = true;
-                dataGridViewClientes.Show();
+                DataTable dataTable = new DataTable();
             }
         }
 
@@ -120,6 +130,10 @@ namespace CadastroCliente
 
         private void FormClientes_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'felipeCostaDataSet.Clientes' table. You can move, or remove it, as needed.
+            this.clientesTableAdapter.Fill(this.felipeCostaDataSet.Clientes);
+            // TODO: This line of code loads data into the 'felipeCostaDataSet.Clientes' table. You can move, or remove it, as needed.
+            
 
         }
 
@@ -189,14 +203,13 @@ namespace CadastroCliente
             limpaCampoCadastroCliente();
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-
-        }
+        
 
         private void textBoxPesquisaNomeCliente_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+       
     }
 }

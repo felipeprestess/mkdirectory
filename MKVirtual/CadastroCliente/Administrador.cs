@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Windows.Forms;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace CadastroCliente
 {
@@ -50,9 +52,20 @@ namespace CadastroCliente
         {
             return listaClientes;
         }
+
+        
+
         /*Método de adicionar cliente*/
         public void registrarCliente(string nome, string endereco, string dataNascimento, string email, string fone, string sexo, string nomeConsultora)
         {
+            FelipeCostaDataSet con = new FelipeCostaDataSet();
+            string lit = con.Clientes.Select().ToString();
+            MessageBox.Show("" + lit);
+
+
+            
+            
+
             Cliente person = new Cliente() { Nome = nome, Endereco = endereco, DataNascimento = dataNascimento, Email = email, Telefone = fone, Sexo = sexo, NomeConsultora = nomeConsultora };
             person.Id = proximoIdDisponivel;
             listaClientes.Add(person);

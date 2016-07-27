@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -11,12 +12,66 @@ namespace CadastroCliente
 {
     public partial class FormPrincipal : Form
     {
+        private string stringDeConexao = @"Data Source=WVJVEDEV01.FelipeCosta;Initial Catalog=FelipeCosta;Integrated Security=True";
         public FormPrincipal()
         {
             InitializeComponent();
             
             
             
+        }
+
+        public void SqlExecute(string pSql)
+        {
+            using (SqlConnection cn = new SqlConnection())
+            {
+                try
+                {
+                    cn.ConnectionString = stringDeConexao;
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.Connection = cn;
+                    cmd.CommandType = CommandType.Text;
+                    cmd.CommandText = pSql;
+                    cn.Open();
+                    cmd.ExecuteNonQuery();
+                }
+                catch(Exception e)
+                {
+                    MessageBox.Show("Message: "+e.Message);
+                }
+                finally{
+                    cn.Close();
+                }
+            }
+        }
+
+
+        public DataTable OpenSQL(string pSql)
+        {
+            DataTable dt = new DataTable();
+            using (SqlConnection cn = new SqlConnection())
+            {
+                cn.ConnectionString = stringDeConexao;
+                SqlDataAdapter da = new SqlDataAdapter();
+
+                try
+                {
+                    da.SelectCommand = new SqlCommand();
+                    da.SelectCommand.Connection = cn;
+                    da.SelectCommand.CommandType = CommandType.Text;
+                    da.SelectCommand.CommandText = pSql;
+                    cn.Open();
+                    da.Fill(dt);
+                }
+                catch(Exception e){
+                    MessageBox.Show("Message: " + e.Message);
+                }
+                finally
+                {
+                    cn.Close();
+                }
+            }
+            return dt;
         }
 
         private void Form1_Load(object sender, EventArgs e)
@@ -131,5 +186,14 @@ namespace CadastroCliente
             FormCompra formCompra = new FormCompra();
             formCompra.Show();
         }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+
+            DataGridView dt = new DataGridView();
+            dt.DataSource = OpenSQL(" select * from Clientes");
+        }
+
+       
     }
 }
