@@ -13,6 +13,9 @@ namespace CadastroCliente
     {
         Administrador adm;
         FormPrincipal formPrincipal;
+
+        /**
+        */
         public FormLogin()
         {
             InitializeComponent();
@@ -37,7 +40,9 @@ namespace CadastroCliente
                     
             //}
             if (loginUsuario == loginTemp && passUsuario == passTemp)
-                    formPrincipal.Show();
+            {
+                formPrincipal.Show();
+            }
             else
                 MessageBox.Show("Usuario nao encontrado!","Alerta");
         }
@@ -51,6 +56,11 @@ namespace CadastroCliente
             txtPass.Visible = true;
             lblOpcao.Visible = false;
             cbxOpcaoLogin.Visible = false;
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

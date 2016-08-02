@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -22,6 +23,8 @@ namespace CadastroCliente
         private void Form1_Load(object sender, EventArgs e)
         {
             linkLabelMaryKayPortal.Links.Add(0, linkLabelMaryKayPortal.Text.Length, "http://www.marykay.com.br/");
+            lblUser.Text = "Olá, Adm";
+           
             
         }
 
@@ -130,6 +133,12 @@ namespace CadastroCliente
         {
             FormCompra formCompra = new FormCompra();
             formCompra.Show();
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            
+            
         }
     }
 }

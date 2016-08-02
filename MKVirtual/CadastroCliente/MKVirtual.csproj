@@ -140,6 +140,11 @@
     <Compile Include="FormVenda.Designer.cs">
       <DependentUpon>FormVenda.cs</DependentUpon>
     </Compile>
+    <Compile Include="MKVIRTUALDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>MKVIRTUALDataSet.xsd</DependentUpon>
+    </Compile>
     <Compile Include="Parceira.cs" />
     <Compile Include="Usuario.cs" />
     <Compile Include="Produto.cs" />
@@ -194,6 +199,18 @@
     </Compile>
     <None Include="app.config" />
     <None Include="ClassDiagram1.cd" />
+    <None Include="ClassDiagram2.cd" />
+    <None Include="MKVIRTUALDataSet.xsc">
+      <DependentUpon>MKVIRTUALDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="MKVIRTUALDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>MKVIRTUALDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="MKVIRTUALDataSet.xss">
+      <DependentUpon>MKVIRTUALDataSet.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

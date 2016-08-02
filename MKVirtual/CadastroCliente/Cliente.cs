@@ -31,13 +31,5 @@ namespace CadastroCliente
             get { return produtoInteresse; }
             set { produtoInteresse = value; }
         }
-
-
-
-
-
-
-
-
     }
 }

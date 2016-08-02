@@ -28,23 +28,35 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.btnMostrarTodosClientes = new System.Windows.Forms.Button();
             this.txtPesquisaNomeCliente = new System.Windows.Forms.TextBox();
             this.btnPesquisarCliente = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridViewClientes = new System.Windows.Forms.DataGridView();
+            this.clienteCodigoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteNomeDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteEnderecoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteNascimentoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteEmailDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteTelefoneDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteSexoDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clienteConsultoraDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.clientesBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.bindingSource1 = new System.Windows.Forms.BindingSource(this.components);
+            this.mKVIRTUALDataSet = new CadastroCliente.MKVIRTUALDataSet();
             this.labelTotalClientes = new System.Windows.Forms.Label();
             this.gpxCliente = new System.Windows.Forms.GroupBox();
+            this.txtTelefone = new System.Windows.Forms.TextBox();
+            this.mskDataNascimento = new System.Windows.Forms.MaskedTextBox();
             this.txtIDCliente = new System.Windows.Forms.TextBox();
             this.lblIDCliente = new System.Windows.Forms.Label();
             this.lbID = new System.Windows.Forms.Label();
             this.btnSalvarAlteracao = new System.Windows.Forms.Button();
-            this.dataNascimentoCliente = new System.Windows.Forms.DateTimePicker();
             this.txtEnderecoCliente = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.txtNomeConsultoraCliente = new System.Windows.Forms.TextBox();
+            this.txtConsultora = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.mskTelefoneCliente = new System.Windows.Forms.MaskedTextBox();
             this.rdbtnSexoMasculinoCliente = new System.Windows.Forms.RadioButton();
             this.rdbtnSexoFemininoCliente = new System.Windows.Forms.RadioButton();
             this.labelSexoCadastroCliente = new System.Windows.Forms.Label();
@@ -59,8 +71,12 @@
             this.btnNovoCliente = new System.Windows.Forms.Button();
             this.btnRemoverCliente = new System.Windows.Forms.Button();
             this.labelLinhasSelecionadas = new System.Windows.Forms.Label();
+            this.clientesTableAdapter = new CadastroCliente.MKVIRTUALDataSetTableAdapters.ClientesTableAdapter();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mKVIRTUALDataSet)).BeginInit();
             this.gpxCliente.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -102,7 +118,19 @@
             // 
             // dataGridViewClientes
             // 
+            this.dataGridViewClientes.AllowUserToOrderColumns = true;
+            this.dataGridViewClientes.AutoGenerateColumns = false;
             this.dataGridViewClientes.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridViewClientes.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.clienteCodigoDataGridViewTextBoxColumn,
+            this.clienteNomeDataGridViewTextBoxColumn,
+            this.clienteEnderecoDataGridViewTextBoxColumn,
+            this.clienteNascimentoDataGridViewTextBoxColumn,
+            this.clienteEmailDataGridViewTextBoxColumn,
+            this.clienteTelefoneDataGridViewTextBoxColumn,
+            this.clienteSexoDataGridViewTextBoxColumn,
+            this.clienteConsultoraDataGridViewTextBoxColumn});
+            this.dataGridViewClientes.DataSource = this.clientesBindingSource1;
             this.dataGridViewClientes.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridViewClientes.Location = new System.Drawing.Point(0, 0);
             this.dataGridViewClientes.Name = "dataGridViewClientes";
@@ -110,6 +138,70 @@
             this.dataGridViewClientes.TabIndex = 0;
             this.dataGridViewClientes.Visible = false;
             this.dataGridViewClientes.Click += new System.EventHandler(this.dataGridViewClientes_Click);
+            // 
+            // clienteCodigoDataGridViewTextBoxColumn
+            // 
+            this.clienteCodigoDataGridViewTextBoxColumn.DataPropertyName = "ClienteCodigo";
+            this.clienteCodigoDataGridViewTextBoxColumn.HeaderText = "Codigo";
+            this.clienteCodigoDataGridViewTextBoxColumn.Name = "clienteCodigoDataGridViewTextBoxColumn";
+            this.clienteCodigoDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // clienteNomeDataGridViewTextBoxColumn
+            // 
+            this.clienteNomeDataGridViewTextBoxColumn.DataPropertyName = "ClienteNome";
+            this.clienteNomeDataGridViewTextBoxColumn.HeaderText = "Nome";
+            this.clienteNomeDataGridViewTextBoxColumn.Name = "clienteNomeDataGridViewTextBoxColumn";
+            // 
+            // clienteEnderecoDataGridViewTextBoxColumn
+            // 
+            this.clienteEnderecoDataGridViewTextBoxColumn.DataPropertyName = "ClienteEndereco";
+            this.clienteEnderecoDataGridViewTextBoxColumn.HeaderText = "Endereço";
+            this.clienteEnderecoDataGridViewTextBoxColumn.Name = "clienteEnderecoDataGridViewTextBoxColumn";
+            // 
+            // clienteNascimentoDataGridViewTextBoxColumn
+            // 
+            this.clienteNascimentoDataGridViewTextBoxColumn.DataPropertyName = "ClienteNascimento";
+            this.clienteNascimentoDataGridViewTextBoxColumn.HeaderText = "Data de Nascimento";
+            this.clienteNascimentoDataGridViewTextBoxColumn.Name = "clienteNascimentoDataGridViewTextBoxColumn";
+            // 
+            // clienteEmailDataGridViewTextBoxColumn
+            // 
+            this.clienteEmailDataGridViewTextBoxColumn.DataPropertyName = "ClienteEmail";
+            this.clienteEmailDataGridViewTextBoxColumn.HeaderText = "Email";
+            this.clienteEmailDataGridViewTextBoxColumn.Name = "clienteEmailDataGridViewTextBoxColumn";
+            // 
+            // clienteTelefoneDataGridViewTextBoxColumn
+            // 
+            this.clienteTelefoneDataGridViewTextBoxColumn.DataPropertyName = "ClienteTelefone";
+            this.clienteTelefoneDataGridViewTextBoxColumn.HeaderText = "Telefone";
+            this.clienteTelefoneDataGridViewTextBoxColumn.Name = "clienteTelefoneDataGridViewTextBoxColumn";
+            // 
+            // clienteSexoDataGridViewTextBoxColumn
+            // 
+            this.clienteSexoDataGridViewTextBoxColumn.DataPropertyName = "ClienteSexo";
+            this.clienteSexoDataGridViewTextBoxColumn.HeaderText = "Sexo";
+            this.clienteSexoDataGridViewTextBoxColumn.Name = "clienteSexoDataGridViewTextBoxColumn";
+            // 
+            // clienteConsultoraDataGridViewTextBoxColumn
+            // 
+            this.clienteConsultoraDataGridViewTextBoxColumn.DataPropertyName = "ClienteConsultora";
+            this.clienteConsultoraDataGridViewTextBoxColumn.HeaderText = "Consultora";
+            this.clienteConsultoraDataGridViewTextBoxColumn.Name = "clienteConsultoraDataGridViewTextBoxColumn";
+            // 
+            // clientesBindingSource1
+            // 
+            this.clientesBindingSource1.DataMember = "Clientes";
+            this.clientesBindingSource1.DataSource = this.bindingSource1;
+            // 
+            // bindingSource1
+            // 
+            this.bindingSource1.DataSource = this.mKVIRTUALDataSet;
+            this.bindingSource1.Position = 0;
+            // 
+            // mKVIRTUALDataSet
+            // 
+            this.mKVIRTUALDataSet.DataSetName = "MKVIRTUALDataSet";
+            this.mKVIRTUALDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // labelTotalClientes
             // 
@@ -122,16 +214,16 @@
             // 
             // gpxCliente
             // 
+            this.gpxCliente.Controls.Add(this.txtTelefone);
+            this.gpxCliente.Controls.Add(this.mskDataNascimento);
             this.gpxCliente.Controls.Add(this.txtIDCliente);
             this.gpxCliente.Controls.Add(this.lblIDCliente);
             this.gpxCliente.Controls.Add(this.lbID);
             this.gpxCliente.Controls.Add(this.btnSalvarAlteracao);
-            this.gpxCliente.Controls.Add(this.dataNascimentoCliente);
             this.gpxCliente.Controls.Add(this.txtEnderecoCliente);
             this.gpxCliente.Controls.Add(this.label2);
-            this.gpxCliente.Controls.Add(this.txtNomeConsultoraCliente);
+            this.gpxCliente.Controls.Add(this.txtConsultora);
             this.gpxCliente.Controls.Add(this.label1);
-            this.gpxCliente.Controls.Add(this.mskTelefoneCliente);
             this.gpxCliente.Controls.Add(this.rdbtnSexoMasculinoCliente);
             this.gpxCliente.Controls.Add(this.rdbtnSexoFemininoCliente);
             this.gpxCliente.Controls.Add(this.labelSexoCadastroCliente);
@@ -150,6 +242,22 @@
             this.gpxCliente.TabIndex = 27;
             this.gpxCliente.TabStop = false;
             this.gpxCliente.Text = "Detalhes do Cliente";
+            // 
+            // txtTelefone
+            // 
+            this.txtTelefone.Location = new System.Drawing.Point(132, 146);
+            this.txtTelefone.Name = "txtTelefone";
+            this.txtTelefone.Size = new System.Drawing.Size(140, 20);
+            this.txtTelefone.TabIndex = 51;
+            // 
+            // mskDataNascimento
+            // 
+            this.mskDataNascimento.Location = new System.Drawing.Point(132, 91);
+            this.mskDataNascimento.Mask = "00/00/0000";
+            this.mskDataNascimento.Name = "mskDataNascimento";
+            this.mskDataNascimento.Size = new System.Drawing.Size(67, 20);
+            this.mskDataNascimento.TabIndex = 50;
+            this.mskDataNascimento.ValidatingType = typeof(System.DateTime);
             // 
             // txtIDCliente
             // 
@@ -187,13 +295,6 @@
             this.btnSalvarAlteracao.Visible = false;
             this.btnSalvarAlteracao.Click += new System.EventHandler(this.buttonSalvarAlteracao_Click);
             // 
-            // dataNascimentoCliente
-            // 
-            this.dataNascimentoCliente.Location = new System.Drawing.Point(132, 89);
-            this.dataNascimentoCliente.Name = "dataNascimentoCliente";
-            this.dataNascimentoCliente.Size = new System.Drawing.Size(146, 20);
-            this.dataNascimentoCliente.TabIndex = 45;
-            // 
             // txtEnderecoCliente
             // 
             this.txtEnderecoCliente.Location = new System.Drawing.Point(131, 64);
@@ -210,12 +311,12 @@
             this.label2.TabIndex = 43;
             this.label2.Text = "Endereço";
             // 
-            // txtNomeConsultoraCliente
+            // txtConsultora
             // 
-            this.txtNomeConsultoraCliente.Location = new System.Drawing.Point(132, 195);
-            this.txtNomeConsultoraCliente.Name = "txtNomeConsultoraCliente";
-            this.txtNomeConsultoraCliente.Size = new System.Drawing.Size(107, 20);
-            this.txtNomeConsultoraCliente.TabIndex = 42;
+            this.txtConsultora.Location = new System.Drawing.Point(132, 195);
+            this.txtConsultora.Name = "txtConsultora";
+            this.txtConsultora.Size = new System.Drawing.Size(107, 20);
+            this.txtConsultora.TabIndex = 42;
             // 
             // label1
             // 
@@ -225,15 +326,6 @@
             this.label1.Size = new System.Drawing.Size(88, 13);
             this.label1.TabIndex = 41;
             this.label1.Text = "Nome Consultora";
-            // 
-            // mskTelefoneCliente
-            // 
-            this.mskTelefoneCliente.CutCopyMaskFormat = System.Windows.Forms.MaskFormat.IncludePromptAndLiterals;
-            this.mskTelefoneCliente.Location = new System.Drawing.Point(131, 143);
-            this.mskTelefoneCliente.Mask = "(999) 0000-0000";
-            this.mskTelefoneCliente.Name = "mskTelefoneCliente";
-            this.mskTelefoneCliente.Size = new System.Drawing.Size(100, 20);
-            this.mskTelefoneCliente.TabIndex = 40;
             // 
             // rdbtnSexoMasculinoCliente
             // 
@@ -368,7 +460,11 @@
             this.labelLinhasSelecionadas.Text = "Linhas Selecionadas: 0";
             this.labelLinhasSelecionadas.Visible = false;
             // 
-            // FormClientes
+            // clientesTableAdapter
+            // 
+            this.clientesTableAdapter.ClearBeforeFill = true;
+            // 
+            // FormCliente
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -383,11 +479,14 @@
             this.Controls.Add(this.btnPesquisarCliente);
             this.Controls.Add(this.txtPesquisaNomeCliente);
             this.Controls.Add(this.btnMostrarTodosClientes);
-            this.Name = "FormClientes";
+            this.Name = "FormCliente";
             this.Text = "Clientes";
             this.Load += new System.EventHandler(this.FormClientes_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewClientes)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.clientesBindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.bindingSource1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.mKVIRTUALDataSet)).EndInit();
             this.gpxCliente.ResumeLayout(false);
             this.gpxCliente.PerformLayout();
             this.ResumeLayout(false);
@@ -415,18 +514,31 @@
         private System.Windows.Forms.Label labelEmailCadastroCliente;
         private System.Windows.Forms.Label labelIdadeCadastroCliente;
         private System.Windows.Forms.Label labelNomeCadastroCliente;
-        private System.Windows.Forms.MaskedTextBox mskTelefoneCliente;
-        private System.Windows.Forms.TextBox txtNomeConsultoraCliente;
+        private System.Windows.Forms.TextBox txtConsultora;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox txtEnderecoCliente;
         private System.Windows.Forms.Button btnNovoCliente;
         private System.Windows.Forms.Button btnRemoverCliente;
-        private System.Windows.Forms.DateTimePicker dataNascimentoCliente;
         private System.Windows.Forms.Label labelLinhasSelecionadas;
         private System.Windows.Forms.Button btnSalvarAlteracao;
         private System.Windows.Forms.Label lbID;
         private System.Windows.Forms.Label lblIDCliente;
         private System.Windows.Forms.TextBox txtIDCliente;
+        
+        private System.Windows.Forms.MaskedTextBox mskDataNascimento;
+        private System.Windows.Forms.TextBox txtTelefone;
+        private MKVIRTUALDataSet mKVIRTUALDataSet;
+        private MKVIRTUALDataSetTableAdapters.ClientesTableAdapter clientesTableAdapter;
+        private System.Windows.Forms.BindingSource clientesBindingSource1;
+        private System.Windows.Forms.BindingSource bindingSource1;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteCodigoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteNomeDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteEnderecoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteNascimentoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteEmailDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteTelefoneDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteSexoDataGridViewTextBoxColumn;
+        private System.Windows.Forms.DataGridViewTextBoxColumn clienteConsultoraDataGridViewTextBoxColumn;
     }
 }

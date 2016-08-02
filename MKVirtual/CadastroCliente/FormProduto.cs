@@ -145,6 +145,7 @@ namespace CadastroCliente
             btnRegistraProduto.Visible = true;
             lblTotalProdutos.Text = "Total: " + adm.ListaProdutos.Count();
             lblLinhasSelecionadas.Visible = false;
+            btnRemoverProduto.Visible = false;
 
         }
     }
